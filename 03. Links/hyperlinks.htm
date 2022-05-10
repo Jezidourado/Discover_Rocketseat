@@ -1,0 +1,136 @@
+<!--
+    Hyeperlinks - Elemento Âncora: <a>
+
+        + Anatomia
+
+        + Atributos:
+            - globais (tittle, id, class...)
+            - href
+                - para onde itemos, quando clicar
+                    - url completa (website)
+                    - email
+                    - telefone
+                    - fragmento
+            - download
+            - target
+                - _self (padrão)
+                - _blank
+-->
+
+<div style="color: red;">
+    <h2>Atributos href</h2>
+    </div>
+
+<div style="color: red;">
+website / e-mail / telefone / </div>
+
+<p>Find-me:</p>
+
+<ul>
+    <li><a href="https://google.com.br" target="_blank">Website</a></li>
+    <!--
+        Neste caso, target="_blank" leva à pagina abrindo outra aba,
+        permanecendo a página de origem. Sem esse atributo, o link
+        é aberto na mesma aba, saindo da página de origem.
+    -->
+    <li><a href="malito:jezieldourado@outlook.com">Email</a></li>
+    <li><a href="tel:+5519992166970">Telefone</a></li>
+</ul>
+
+<div style="color: red;">
+fragmento
+</div>
+
+<p>Saiba mais</p>
+<ul>
+    <li><a href="#about" >Sobre mim</a></li>
+    <li><a href="#history">Email</a></li>
+    <li><a href="#works">Trabalhos</a></li>
+</ul>
+
+<!--
+    os fragmentos (Ex.:#about) servem para, ao clicar no link desejado, 
+    a página leva o usuário exatamente ao trecho referente na página.
+    OBS: o fragmento fica no final do link, exemplo usando works 
+    (file:///C:/Users/cf426774/Desktop/HD/Works/Starter-html/hyperlinks.htm#works)
+-->
+
+<h1 id="about">Sobre mim</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sit, 
+quaerat adipisci ad dolore inventore nisi fugit libero corrupti ex 
+iste maxime praesentium culpa, dolorem autem recusandae fuga labore 
+possimus.
+
+<h2 id="history">História</h2>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quo
+ab, aut tenetur similique qui at. Ea, mollitia quod. Necessitatibus
+natus culpa cupiditate ipsa, ipsum cumque modi corrupti quisquam 
+obcaecati?
+
+<h2 id="works">Trabalhos</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis 
+obcaecati quod facilis fuga ipsum cumque minus facere id vero est 
+veritatis dolorem necessitatibus expedita perspiciatis iste, officia 
+porro ea aperiam?
+
+
+<!--
+    Conteúdo dos hyperlinks
+
+    - posso colocar qualquer conteúdo
+    Os diversos tipos de links abaixo levam ao mesmo endereço
+-->
+
+<h2 style="color: red;">Conteúdo dos hyperlinks</h2>
+
+<a href="https://google.com" title="Ir para o Google">
+    <h1>Google</h1>
+    <p>Link para o site da Google</p>
+    <img src="https://source.unsplash.com/random" alt="">
+</a>
+
+<!--
+    URLs e caminhos dos arquivos
+
+    - URL - Uniform Resource Locator
+        - https://google.com
+        - Sequência de texto que define onde algo está localizado na web
+    - URL usam caminhos para encontrar arquivos
+
+    - Caminhos dos arquivos
+        Onde, no explorador de arquivos, um recurso está localizado
+-->
+
+<h2 style="color: red;">URLs e caminhos dos arquivos</h2>
+
+<p>Caminho dos arquivos</p>
+
+<a href="hyperlinks.htm">Abrir documento Hyperlinks</a>
+        <!--
+            Neste caso, o link foi direto para este documento.
+        -->
+
+<p>URLs</p>
+
+<a href="https://google.com">Abrir o Google</a>
+
+<!--
+    Navegando pelos diretórios
+
+    Como navegar pelos caminhos?
+
+    - mesmo diretório
+    - entrando em diretórios
+    - saindo de diretórios
+    - diretório raiz (root ou pai)
+-->
+<h2 style="color: red;">Navegando pelos diretórios</h2>
+
+<a href="../elementos-genericos.html">arquivo na pasta anterior</a>
+<br>
+<a href="./hyperlinks.htm">arquivo no diretório raiz (este doc)</a>
+<br>
+<a href="listas.html">arquivo na mesma pasta</a>
+<br>
+<a href="../citações/citacoes2.html">arquivo na pasta citações</a>
+
