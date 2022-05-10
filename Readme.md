@@ -39,3 +39,5 @@ COMO PEGAR AS ALTERAÇÕES REALIZADAS NO REPOSITÓRIO CLONADO (ORIGEM)
 2. "cd nomedapasta" (cd é o comando pra entrar dentro de uma pasta)
 3. "git pull"
 4. Abrir arquivo na pasta do computador que o mesmo estará atualizado
+
+att
