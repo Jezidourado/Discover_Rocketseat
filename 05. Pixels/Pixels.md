@@ -51,3 +51,76 @@ Representa um conjunto de coordenadas 2D;
 * Usado para alguns tipos de propriedades
 * Não confundir com a propriedade `position`
 
+Ex.: Mover uma imagem de background
+```html
+<div class="box"></div>
+```
+
+```css
+.box {
+  height: 300px;
+  width: 400px;
+  background-image: url(http://source.unsplash.com/random)
+  background-repeat: no-repeat;
+  background-position: bottom right; /*aqui a box é movida*/
+}
+```
+
+# Funções
+
+Em programação, funções são reconhecidas por causar um reaproveitamento de código, realizando cálculos automaticos que simplificam o código.
+
+* rgb()
+* hsl()
+* url()
+* calc()
+
+Ex.: Para uma imagem de background, retire 40px.
+```html
+<div class="box"></div> 
+```
+
+```css
+body {
+  height: 100vh; /*determinando que a altura da view height será 100%*/
+  margin: 0;
+}
+.box {
+  height: calc(100% - 40px); /*no caso, estamos usando a função calc*/
+  width: 100%;
+  background-image:
+  url(http://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+```
+
+# Strings e identificadores
+
+* Strings: Texto envolto em aspas
+* Identificadores: red, black, gold (nomes de cor, por ex.)
+
+```html
+<div class="box"></div> 
+```
+
+```css
+body {
+  height: 100vh;
+  margin: 0;
+}
+.box {
+  height: calc(100% - 40px); /*no caso, estamos usando a função calc*/
+  width: 100%;
+  background-image:
+  url(http://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.box::after {
+  content: "Aqui vem uma mensagem" /*neste caso, essa é a string*/
+  color: white;
+}
+```
+
