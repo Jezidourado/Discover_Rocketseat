@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+header {
+  height: 100px;
+  border: 7px dashed rgb(53, 96, 124);
+
+  /* Aplicando somente a cor do fundo */
+  background-color: rgb(200, 100, 50);
+  /* Aplicando uma imagem ao fundo */
+  background-image: url(https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Frocketseat.svg&w=256&q=100);
+  /* Definindo que a imagem não se repetirá */
+  background-repeat: no-repeat;
+  /* Definindo que a imagem se repetirá apenas no eixo x */
+  background-repeat: repeat-x;
+  /* Definindo que a imagem se repetirá apenas no eixo y */
+  background-repeat: repeat-y;
+}
