@@ -77,3 +77,49 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
   - o tamanho delas na caixa
 - Usar cor e imagem juntas
 - usar cor gradiente
+
+### Background commands
+
+````css
+{
+  /* Aplicando somente a cor do fundo */
+  background-color: rgb(200, 100, 50);
+  /* Aplicando uma imagem ao fundo */
+  background-image: url(https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Frocketseat.svg&w=256&q=100);
+  /* Definindo que a imagem não se repetirá */
+  background-repeat: no-repeat;
+  /* Definindo que a imagem se repetirá apenas no eixo x */
+  background-repeat: repeat-x;
+  /* Definindo que a imagem se repetirá apenas no eixo y */
+  background-repeat: repeat-y;
+  /* movendo a imagem */
+  background-position: center;
+  background-position: left bottom;
+  background-position: right top;
+  ...
+  /* alterando o tamanho da imagem */
+  background-size: contain; /* fica dentro da box */
+  background-size: cover; /* se estica cobrindo toda a box */
+  background-size: 50% 25%; /* o primeiro se aplica para largura e o segundo para altura da imagem */
+  background-size: 3em; 
+  background-size: 15px;
+  background-origin: border-box; /* indica que a imagem irá começar a partir da borda, ou seja, pega a borda também */
+  background-origin: content-box; /* indica que a imagem irá começar após da borda (padrão) */
+  background-origin: padding-box; /* indica que a imagem irá começar a partir do padding, ou seja, todo o preenchimento */
+  background-clip: border-box; /* indica que a imagem irá começar a partir do border */
+  background-clip: content-box; /* indica que a imagem irá começar a partir do conteudo, eliminando todo o padding da box */
+  background-clip: padding-box; /* indica que a imagem irá começar a partir do padding, não considerando a border */
+  background-attachment: scroll; /* indica que a imagem irá abaixar junto com o texto da página quando der o scroll do mouse */
+  background-attachment: fixed; /* indica que a imagem irá ficar fixa na página quando der o scroll do mouse */
+
+  /* Shorthands */
+  background: rgb(55, 100, 50) url(https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Frocketseat.svg&w=256&q=100) no-repeat right top / 100px border-box content-box fixed;
+
+  /* Gradient (mudança de cores de maneira suave) */
+  background: linear-gradient(180deg, red, yellow)
+  background: radial-gradient(red, yellow, green)
+  background: linear-gradient(rgba(13, 124, 89, 11), rgba(220, 110, 15, 0.2))
+  /* Para usar múltiplos backgrounds, basta serapará-los por virgulas nos comandos. Por exemplo, para ter um background fixo e um que muda de acordo com o scroll */
+
+}
+````
