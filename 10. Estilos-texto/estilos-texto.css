@@ -1,0 +1,19 @@
+/* p {
+  font-weight: normal;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  font-variant: small-caps;
+  font-stretch: condensed;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  line-height: 1.6;
+  text-transform: capitalize;
+  text-decoration: underline wavy red;
+  text-align: justify;
+  text-shadow:  7px 1px 1px red, 
+                2px 7px 1px blue;
+} */
+
+p {
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+}

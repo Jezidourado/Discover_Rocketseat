@@ -1191,3 +1191,709 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
 
 }
 ````
+# Vídeo
+
+```html
+<vídeo>
+```
+
+```html
+<!-- adicionando um vídeo -->
+<video src="C:\Users\cf426774\Downloads\NLW Return – Impulse_ Stage 4.mp4"></video>
+
+<!-- adicionando controles -->
+<video src="C:\Users\cf426774\Downloads\NLW Return – Impulse_ Stage 4.mp4" controls></video>
+
+<!-- source (usar por exemplo caso o browser não reconheça o vídeo de primeira, se este estiver hospedado internamente) -->
+<video controls
+  <source src="C:\Users\cf426774\Downloads\NLW Return – Impulse_ Stage 4.mp4" type="video/mp4"> 
+</video>
+
+<!-- tags para melhorar a navegabilidade -->
+<video controls 
+  width="500"
+  height="400"
+  autoplay
+  preload="auto"
+  loop
+  muted
+  poster="image.jpg"
+  >
+```
+- autoplay = vídeo carrega automaticamente (nem todos os navegadores aceitam essa tag por conta da segurança embutida)
+
+- preload="auto" = carrega automaticamente o vídeo
+  
+- preload="metadata" = carrega apenas metadata, como players e duração do vídeo
+
+- preload="none" = não carrega nada do vídeo, apenas a janela
+
+- loop = toca o vídeo em loop quando encerrar (depende do navegador)
+
+- muted
+- autoplay = essas duas tags juntas reproduzem o  vídeo automaticamente sem audio
+
+- poster="imagem.jpg" = imagem de background na janela do video
+
+
+## IMPORTANTE:
+Nem todos os browsers tem o mesmo comportamento, portanto é bom tentar mais de uma estratégia de reproduzir o vídeo, pois o navegador irá ler o código de cima para baixo e ir tentando reproduzir de diferentes formas.ss
+
+# Audio
+
+```html
+<audio>
+```
+
+O audio tem o mesmo comportamento e comandos que o vídeo. 
+
+
+# Inframe
+
+INLINE FRAME ELEMENT - Elemento que tratá conteúdos externos
+
+É possível incorporar diversos tipos de conteúdos, como audio, vídeo, mapas, etc.
+
+Quando se deseja adicionar um vídeo do youtube, por exemplo, basta:
+- abrir o vídeo;
+- Ir em "compartilhar"
+- Ir em "incorporar" ou "embed"
+- copiar o link e adicionar no código, como exemplo abaixo, que irá vir com controles sugeridos do próprio Youtube.
+
+```html
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/X2mOfqeAH7c?start=146" 
+  title="2021 em uma música" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
+```
+- title: importante para acessibilidade
+- frameborder: define a borda para o conteúdo
+- allow: define as permissões do conteúdo
+- allowfullscreen: permite tela cheia
+
+# Imagens
+
+````html
+<img>
+````
+
+site referencia para imagens livres de direitos autorais: source.unsplash.com
+
+- src: tag que procura a imagem (link)
+
+- alt: caso a imagem não for encontrada, usa-se uma alternativa, pode conter um texto para auxiliar a explicar o que era aquela imagem.
+
+- title: texto sobre a imagem quando se descansa o mouse encima da mesma.
+
+- width: largura
+- height: altura
+IMPORTANTE: caso não se saiba a proporção da imagem, colocar apenas uma medida (altura ou largura) para que não se tenha uma imagem esticada.
+
+- adicionando link: através da tag "a".
+
+Exemplo de codigo:
+
+````html
+<a href="https://google.com.br">
+  <img 
+    src="https://source.unsplash.com/random" alt="Imagem não encontrada"
+    title="Imagem qualquer"
+    width="800px"
+    >
+</a>
+````
+
+## Criando títulos ou legendas visíveis nas imagens
+
+Há a possibilidade de deixar textos visíveis ás imagens adicionadas, sendo em formato de texto explicativo ou até mesmo para legendas, onde a intenção é dar o crédito da imagem.
+
+````html
+<figure>
+````
+
+Exemplo:
+
+```html
+
+  <figure>
+    <img 
+    src="https://source.unsplash.com/random" alt="Imagem não encontrada"
+    title="Imagem qualquer"
+    width="800px"
+    >
+    <figcaption>Legenda da imagem</figcaption>
+  </figure>
+```
+
+<Figcaption> é usado para identificar que a legenda é referente àquela imagem em específico quando se há diversas imagens. Caso haja somente uma imagem, pode-se usar a tag <p>
+
+# SVG
+
+SVG - Scalable Vector Graphics 
+
+````html
+<svg>
+````
+
+É uma marcação, estilo html, mas não é para textos e sim para criação de imagens.
+
+- Imagem rasterizadas: fotografias, imagens prontas
+- Imagens vetorizadas: imagens criadas que possuem um código (por exemplo as imagens criadas com FIGMA ou CANVAS)
+
+Benefícios imagem vetorizada (SVG)
+- Mais leve
+- Mais detalhada (melhor qualidade)
+- Maior acessibilidade e SEO - Search Engine Optimization (otimização de mecanismos de busca)
+- Pode ser editada via CSS ou atributos
+
+Desvantagens imagem vetorizada (SVG)
+- Pode ser mais complicado de trabalhar
+- Quanto mais complexa a imagem, mais trabalho para o navegador
+- Navegadores mais antigos não possuem suporte para essa tag
+
+OBS: Para fotografias, prefira imagens rasterizadas (.jpg, .jpeg, .png)
+
+Exemplo de svg:
+
+````html
+<svg width="200" height="200">
+    <circle cx="100" cy="100" r="80" stroke="red"
+    stroke-width="6" fill="blue"
+    />
+</svg>
+
+<svg width="300" height="300">
+    <rect
+    stroke="blue"
+    stroke-width="4"
+    width="100%"
+    height="100%"
+    fill="green" />
+</svg>
+````
+
+Para não deixarmos o svg no código, podemos criar um arquivo.svg
+
+# Layouts
+
+> Anteriormente os layouts eram feitos através de tabelas **tables**
+
+> Posteriormente vieram os **floats** possibilitando que os elementos flutuassem na página e **clear** para parar de flutuar
+
+> Os **frameworks** vieram para dar a ideia de **Grid Systems**, dividindo a tela em grids para posicionamento dos elementos
+
+> Com o **flexbox** e o **grid** foi possivel posicionais os elementos com mais liberdade
+
+## Posicionamentos
+
+Controlar onde, na página, o elemento irá ficar, alterando o fluxo normal dos elementos.
+
+> Name: **position**
+
+> Value: **static | relative | absolute | fixed**
+
+> **Static** comportamento normal do layout, deixando um elemento abaixo do outro.
+
+> **Relative** permite movimentar um elemento para qualquer lugar da tela, sem que os demais sejam afetados.
+
+```css
+.box1 {
+  background-color: red;
+  position: relative;
+  left: 300px;
+  top: 80px;
+}
+```
+> **Absolute** adiciona uma nova camada ao layout. O elemento fica independente dos demais, podendo ser movimentado livremente fora da camada dos demais elementos.
+
+````css
+.box2 {
+  background-color: blue;
+  position: absolute;
+  top: 450;
+}
+````
+
+> **Fixed** fixa o elemento na página, de modo que o mesmo não se mova em função do scroll do mouse, por exemplo.
+
+````css
+.box3 {
+  background-color: green;
+  position: fixed;
+  top: 70;
+}
+````
+> **z-index** ou Element Stacking. Dá o grau de importância para as camadas, dizendo qual deve ficar acima, ou abaixo.
+
+````css
+.box4 {
+  background-color: yellow;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.box5 {
+  background-color: purple;
+  position: absolute;
+  left: 10;
+  top: 10;
+  z-index: 2;
+}
+
+.box6 {
+  background-color: aqua;
+  position: absolute;
+  left: 20;
+  top: 20;
+  z-index: 1;
+}
+````
+# Flexbox
+
+````css
+display: flex;
+````
+
+> Nos permite posicionar vários elementos dentro de uma caixa
+
+> Controle em uma dimensão (horizontal ou vertical)
+
+> Alinhamento, direcionamento, ordenar e tamanhos
+
+## Flex-direction
+
+> Qual a direção do flex: horizontal ou vertical
+
+> row | column
+
+## Alinamento
+
+> **justify-content**
+
+> **aling-items**
+
+Exemplo: Deixando o conteúdo exatamente no meio da página independente do tamanho da mesma.
+
+HTML
+
+````html
+<head>
+  <link rel="stylesheet" href="./layout.css" />
+</head>
+<div class="container">
+  <div class="box red"></div>
+  <div class="box blue"></div>
+  <div class="box green"></div>
+</div>
+````
+CSS
+````css
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+````
+
+# Grid
+
+> Posicionamento dos elementos dentro da caixa
+
+> Posicionamento horizontal e vertical ao mesmo tempo
+
+> Pode ser flexível ou fixo
+
+> Cria espaços para os elementos filhos habitarem
+
+Exemplo: Criar um layout com cabeçalho, rodapé conteúdo e informações adicionais, onde:
+- o **cabeçalho** e **rodapé** peguem todo o eixo x;
+- **infos adicionais** fique ao lado direito com largura fixa de 80px;
+- **conteúdo** fique ao lado esquerdo, pegando a largura restante.
+
+HTML
+````html
+<Head>
+  <link rel="stylesheet" href="./layout.css" />
+</Head>  
+  
+  <body>
+    <header>Cabeçalho</header>
+
+    <main>Conteúdo</main>
+
+    <aside>Infos adicionais</aside>
+
+    <footer>Rodapé</footer>
+  </body>
+````
+CSS
+````css
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "main aside"
+  "footer footer";
+
+  grid-template-rows: 30px 1fr 40px;
+  grid-template-columns: 1fr 80px;
+  /* fr = fração */
+}
+
+header {
+  grid-area: header;
+  background-color: green;
+}
+main {
+  grid-area: main;
+  background-color: red;
+}
+aside {
+  grid-area: aside;
+  background-color: blue;
+}
+footer {
+  grid-area: footer;
+  background-color: gray;
+}
+````
+Usando flex no grid, para adicionar logo e menu no cabeçalho
+
+HTML
+````html
+<Head>
+  <link rel="stylesheet" href="./layout.css" />
+</Head>  
+  
+<body>
+  <header>
+    <div>logo</div>
+    <div>menu</div>
+  </header>
+
+  <main>Conteúdo</main>
+
+  <aside>Infos adicionais</aside>
+
+  <footer>Rodapé</footer>
+</body>
+````
+CSS
+````css
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "main aside"
+  "footer footer";
+
+  grid-template-rows: 30px 1fr 40px;
+  grid-template-columns: 1fr 80px;
+  /* fr = fração */
+}
+
+header {
+  grid-area: header;
+  background-color: green;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+main {
+  grid-area: main;
+  background-color: red;
+}
+aside {
+  grid-area: aside;
+  background-color: blue;
+}
+footer {
+  grid-area: footer;
+  background-color: gray;
+}
+````
+# Fontes
+
+## Basic Font Properties
+
+* font-family
+* font-weight
+* font-style
+* font-size
+
+## Font Family
+
+> Tipo de fonte deum elemento
+
+> Lista de fontes e ordem de prioridade
+
+> inclui "fallback" font (escape, caso o caminho original não seja suficiente), exemplo:
+
+```css
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+```
+Neste caso, caso o browser não encontre "Times New Roman" irá procurar "Times" e "serif" posteriormente.
+
+## Font-weight
+
+Referência: https://www.w3.org/TR/css-fonts-3/
+
+Tipos de peso de fontes:
+
+>	normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+
+OBS: Nem todo tipo de peso vai funcionar para todas as fontes.
+
+```css
+p {
+  font-weight: bold;
+}
+```
+
+## Font-style
+
+Referência: https://www.w3.org/TR/css-fonts-3/
+
+Tipos de peso de fontes:
+
+>	normal | italic | oblique
+
+```css
+span {
+  font-style: italic;
+}
+```
+
+## Font-size
+
+Define o tamanho da fonte.
+
+````css
+p {
+  font-size: 18px;
+}
+````
+
+
+## Web fonts
+
+Nem sempre as mesmas fontes estão em todas as máquinas, portanto, ao fazer  uma aplicação com um font-family: "Segoe UI" por exemplo, há a opção de buscar essa fonte na web, para que haja uma padronização em qualquer lugar que ela for aberta.
+
+Referências: 
+https://www.w3.org/TR/css-fonts-3/
+CSS TRICKS - https://css-tricks.com/snippets/css/using-font-face/
+GOOGLE FONTS - https://fonts.google.com
+
+É possível importar essas fontes através de:
+
+> #font-face
+
+> @immport
+
+> link
+
+Exemplo:
+
+HTML
+
+```html
+<Head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">  
+</Head>
+<body>
+  <link rel="stylesheet" href="./estilos-texto.css">
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi maxime necessitatibus eligendi iste similique blanditiis nostrum cupiditate ratione recusandae facilis soluta quo harum perferendis labore exercitationem, vel doloremque veniam officiis!
+  </p>
+</body>
+```
+CSS
+```css
+p {
+  font-weight: normal;
+  font-style: oblique;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+```
+## Mais estilos de fontes
+
+Referência:
+MDN - https://developer.mozila.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals
+
+## Font-variant
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/font-variant
+
+Deixa as letras minúsculas em maiúsculo, mas com um tamanho menor do que as maiúsculas de origem
+````css
+p {
+    font-variant: small-caps;
+  }
+  ````
+## font-stretch
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/font-stretch
+
+  - Alargamento ou encolhimento da fonte
+  - Aceita palavra-chaves como: expanded, condensed, normal
+  - Aceita porcentagens de 50% a 200%
+  
+````css
+  p{
+    font-stretch: expanded;
+  }
+````
+## Letter-spacing
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/letter-spacing
+
+
+Espaços entre caracteres
+
+````css
+p {
+  letter-spacing: 4px;
+}
+````
+
+## Word-spacing
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/word-spacing
+
+Espaços entre palavras
+
+````css
+p {
+  word-spacing: 4px;
+}
+````
+
+## Line-height
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/line-height
+
+- Espaços entre linhas
+- Pode ser com unidades ou sem unidades de medida
+- Comuns: 1.5 ou 2
+
+````css
+p {
+  line-height: 1.6;
+}
+````
+
+## Text-transform
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/text-transform
+
+- Transformação do texto
+
+> Uppercase | lowercase | Capitalize | none 
+
+````css
+p {
+  text-transform: uppercase; 
+}
+````
+
+## Text-decoration
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/text-decoration
+
+- Aparência decorativa de um texto
+
+> Line: underline | overline | line-through
+- Podemos aplicar mais de 1 valor
+
+> Style: wavy | dotted | double | dashed | solid
+
+> color: `<color>` values
+
+````css
+p {
+  text-decoration: underline; /* shorthand */
+}
+````
+
+## Text-align
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/text-align
+
+- Alinhamento de um texto
+
+> left | right | center | justify
+
+````css
+p {
+  text-align: center;
+}
+````
+
+## Text-shadow
+
+Referência: https://developer.mozila.org/en-US/docs/Web/CSS/text-shadow
+
+- Aplica sompras no texto
+- Permite múltiplos valores
+
+> offset-x | offset-y | blur-radius | color
+
+````css
+p {
+  text-shadow:  1px 1px 1px red, /* shorthand */
+                2px 2px 1px green; /* shorthand */
+}
+````
+
+## Shorthand para fontes
+
+> font-style, font-variant, font-weight, font-stretch, font-size, line-height e font-family
+
+````css
+p {
+  /* -style, -variant, -stretch, -size, -line-height e -family */
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+}
+````

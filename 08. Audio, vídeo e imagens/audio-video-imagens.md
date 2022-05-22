@@ -159,6 +159,7 @@ Exemplo de svg:
 <svg width="200" height="200">
     <circle cx="100" cy="100" r="80" stroke="red"
     stroke-width="6" fill="blue"
+    />
 </svg>
 
 <svg width="300" height="300">
