@@ -2728,3 +2728,73 @@ Importante usar os atributos juntos, pois sem o step o browser não entende como
 IMPORTANTE: São campos que ainda não possuem um ótimo suporte, principalmente para navegadores como Safari.
 
 Ficar de olho em https://caniuse.com
+
+## Desenhando o formulário (planejamento)
+
+É importante desenhar o formulário (literalmente) para ajudar a pensar nos requisitos e definir as necessidades do formulário.
+
+> Dicas:
+- O formulário deve ser simples e focado. Um formulário com muitos campos deixam o usuário desmotivado (UX)
+- Somente dados necessários
+- Verifique o que te agrada (UX)
+
+### Exercício prático
+
+Crie um formulário de Contato
+
+1. O formulário deverá conter um título de nome Contato. Usar fieldset e legend para essa finalidade
+
+2. O formulário conterá 3 campos
+  - Nome (input texto)
+  - Email (Input email)
+  - Mensagem (textarea)
+
+3. O formulário deverá conter um botão para enviar
+
+ATENÇÃO: O formulário deverá conter regras de acessibilidade, como o label para cada campo, por exemplo.
+
+EXERCÍCIO FINALIZADO:
+
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  
+  <form id="contact" action="">
+  
+  <fieldset form="contact">
+   
+    <legend>Contato</legend>
+
+    <label for="name">Nome</label><br>
+    <input id="name" name="name" type="text" autocomplete="name" placeholder="Nome completo" autofocus required size="35"/>
+
+    <br>
+
+    <label for="email">E-mail</label><br>
+    <input id="email" name="email" type="email" autocomplete="email" placeholder="nome@dominio.com" required size="35" pattern=".+@\"/>
+    
+    <br>
+
+    <label for="mensage">Mensagem</label><br>
+    <textarea id="mensage" name="mensage" maxlength="400" placeholder="Digite sua mensagem (até 400 caracteres)" required cols="35" rows="10" wrap="on"></textarea>
+    
+    <br>
+    <br>
+    
+    <label for="button"></label>
+    <button type="submit" id="button" form="contact">Enviar</button>
+    
+  </fieldset>
+</form>
+
+</body>
+</html>
+````
+
