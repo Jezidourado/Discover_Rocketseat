@@ -3,8 +3,6 @@
 # ANATOMIA HTML
 
 ```html
-<div style="color: red;">ANATOMIA HTML</div>
-
 <!DOCTYPE html>
 <html lang="en">
   <!--
@@ -20,8 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--
-        A configuação acima do meta, diz que o conteúdo da página será visível
-        tanto em dispositivos móveis como em desktops.
+        A configuação acima do meta, diz que o conteúdo da página será visível tanto em dispositivos móveis como em desktops.
     -->
     <title>Anatomia do documento</title>
   </head>
@@ -86,8 +83,8 @@
   />
   <!-- para buscar uma descrição -->
   <meta property="og:title" content="Um site da Rocketseat" />
-  <!-- para buscar um título -->
 
+  <!-- para buscar um título -->
   <!-- Twitter -->
   <meta name="twitter:title" content="Rocketseat" />
   <head>
@@ -103,8 +100,7 @@
   abreviação
 
   <p>
-    Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar
-    nossos documentos da web.
+    Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.
   </p>
 
   <!--
@@ -116,8 +112,7 @@
   <address>
     <p>Jeziel Dourado</p>
     <p><b>Santa Bárbara d'Oeste, SP.</b></p>
-  </address></abbr
->
+  </address></abbr>
 ```
 
 # CABEÇALHOS E PARÁGRAFOS
@@ -187,12 +182,11 @@ sequi enim sed odio porro. Maiores, molestiae exercitationem.
         Partes gráficas de código
 -->
 
-<code> document.quetySelector("boddy") </code>
+<code> document.querySelector("boddy") </code>
 
 <!--
       <pre>
-          Blocos de código, pois essa tag mantém os espaços em branco
-          e recuos que eu colocar no meu código
+          Blocos de código, pois essa tag mantém os espaços em branco e recuos que eu colocar no meu código
   -->
 
 <pre>
@@ -221,9 +215,8 @@ sequi enim sed odio porro. Maiores, molestiae exercitationem.
 
 <!--
     Atributos Booleanos
-    Não precisam de conteúdo
+    Não precisam de conteúdo ex.: disabled
 -->
-<input type="text" />
 <input type="text" disabled />
 
 <!--
@@ -318,7 +311,7 @@ Hyeperlinks - Elemento Âncora:
         + Atributos:
             - globais (tittle, id, class...)
             - href
-                - para onde itemos, quando clicar
+                - para onde iremos, quando clicar
                     - url completa (website)
                     - email
                     - telefone
@@ -335,7 +328,7 @@ Hyeperlinks - Elemento Âncora:
 ## Atributos href
 
 ```html
-<div style="color: green;">website / e-mail / telefone /</div>
+website / e-mail / telefone
 
 <p>Find-me:</p>
 
@@ -386,12 +379,8 @@ necessitatibus expedita perspiciatis iste, officia porro ea aperiam?
 
 ## CONTEÚDO DOS HYPERLINKS
 
+- posso colocar qualquer conteúdo. Os diversos tipos de links abaixo levam ao mesmo endereço 
 ```html
-- posso colocar qualquer conteúdo Os diversos tipos de links abaixo levam ao
-mesmo endereço -->
-
-<h2 style="color: green;">Conteúdo dos hyperlinks</h2>
-
 <a href="https://google.com" title="Ir para o Google">
   <h1>Google</h1>
   <p>Link para o site da Google</p>
@@ -401,11 +390,14 @@ mesmo endereço -->
 
 ## URLs E CAMINHOS DOS ARQUIVOS
 
+- URL - Uniform Resource Locator - https://google.com 
+- Sequência de texto que define onde algo está localizado na web 
+- URL usam caminhos para encontrar
+arquivos 
+- Caminhos dos arquivos onde, no explorador de arquivos, um recurso
+está localizado 
+
 ```html
-- URL - Uniform Resource Locator - https://google.com - Sequência de texto que
-define onde algo está localizado na web - URL usam caminhos para encontrar
-arquivos - Caminhos dos arquivos Onde, no explorador de arquivos, um recurso
-está localizado -->
 
 <p>Caminho dos arquivos</p>
 
@@ -2715,9 +2707,9 @@ Importante usar os atributos juntos, pois sem o step o browser não entende como
 
 - **time** - trás a hora
 
-````html
+~~~html
 <input type="time"/>
-````
+~~~
 
 - **week** - trás a semana toda
 
