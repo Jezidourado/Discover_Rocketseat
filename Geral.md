@@ -397,45 +397,41 @@ arquivos
 - Caminhos dos arquivos onde, no explorador de arquivos, um recurso
 está localizado 
 
+### Caminho dos arquivos
+
 ```html
-
-<p>Caminho dos arquivos</p>
-
 <a href="hyperlinks.htm">Abrir documento Hyperlinks</a>
-<!--
-          Neste caso, o link foi direto para este documento.
-      -->
+```
+Neste caso, o link foi direto para este documento.
 
-<p>URLs</p>
+### URLs
 
+```html
 <a href="https://google.com">Abrir o Google</a>
+```
+### Navegando pelos diretórios
 
-<!--
-  Navegando pelos diretórios
-
-  Como navegar pelos caminhos?
-
+> Como navegar pelos caminhos?
   - mesmo diretório
   - entrando em diretórios
   - saindo de diretórios
   - diretório raiz (root ou pai)
--->
-<h2 style="color: green;">Navegando pelos diretórios</h2>
 
+```html
 <a href="../elementos-genericos.html">arquivo na pasta anterior</a>
-<br />
+
 <a href="./hyperlinks.htm">arquivo no diretório raiz (este doc)</a>
-<br />
+
 <a href="listas.html">arquivo na mesma pasta</a>
-<br />
+
 <a href="../citações/citacoes2.html">arquivo na pasta citações</a>
 ```
 
 # LISTAS
 
-```html
-    <!-- Listas não ordenadas -->
+Listas não ordenadas
 
+```html
 <h1>Suco Detox</h1>
 
 <h2>Ingredientes:</h2>
@@ -449,9 +445,10 @@ está localizado
     <li>Gelo a gosto.</li>
 </ul>
 </p>
+```
+Listas ordenadas
 
-<!-- Listas ordenadas -->
-
+```html
 <h1>Suco Detox</h1>
 
 <h2>Ingredientes:</h2>
@@ -465,17 +462,16 @@ está localizado
     <li>Gelo a gosto.</li>
 </ol>
 </p>
-
-<!--
-    Listas de descrição
+```
+Listas de descrição
 
     <dl> - description list = lista de descrição
-        <dt></dt> - description text = texto de descrição
-        <dd></dd> - description = descrição em si
+    <dt></dt> - description text = texto de descrição
+    <dd></dd> - description = descrição em si
 
 Objetivo: marcar um conjunto de itens e suas descrições
--->
 
+```html
 <h2>Glossário</h2>
 <dl>
     <dt>Hypertext</dt>
@@ -491,9 +487,7 @@ Objetivo: marcar um conjunto de itens e suas descrições
 
 # URL
 
-```html
-<!--
-    URLs absulutos vs relativos
+URLs absulutos vs relativos
 
     - Absolutos
         -inclui protocolo e nome de domínio
@@ -503,8 +497,8 @@ Objetivo: marcar um conjunto de itens e suas descrições
     - Relativos
         - relativo à página aberta no momento
         - apontará para lugares diferentes
--->
 
+```html
 <a href="google.com.br">relativo: ir para o Google</a>
 <br />
 <a href="https://google.com.br">absoluto: ir para o Google</a>
@@ -512,12 +506,13 @@ Objetivo: marcar um conjunto de itens e suas descrições
 
 # CITAÇÕES
 
-```html
-<!--
-    Citações
-    <blockquote> (aspas)
--->
+Citações
 
+```html
+<blockquote> (aspas)
+```
+
+```html
 <blockquote
   cite="https://www.uol.com.br/esporte/futebol/central-de-jogos/#/25-04-2022"
 >
@@ -2792,3 +2787,143 @@ EXERCÍCIO FINALIZADO:
 </html>
 ````
 
+# JavaScript
+
+* Linguagem de programação que roda no Navegador do usuário (front-end)
+  * Ao clicar em um botão e aparecer uma janela, está acontecendo uma ação em JavaScript
+  * ALteração do site ou aplicativo, conforme a interação do usuário
+* Roda também no computador (back-end)
+
+## O que podemos fazer com JavaScript?
+
+* Criar aplicações web, mobile (react Native), desktop (Electron)
+
+* Empresas famosas que usam: Facebook (Instagram, Whatsapp), Google (Youtube, Gmail, Drive), Uber, Netflix, Tiktok.
+* 99,99% dos sites na web usam JavaScript
+* Linguagem obrigatória para quem programa o Front-end Web.
+
+## Evolução
+
+* A comunidade cresce cada vez mais e a linguagem está sempre evoluindo
+
+## O que vamos ver?
+
+- Tipos de dados
+- Variáveis
+- Funções
+- Condicionais
+- Estruturas de repetição
+...
+
+## A importância da Sixtaxe
+
+* Toda linguagem tem sintaxe (maneira correta de se escrever)
+* Uma boa comunicação necessita de uma boa sintaxe
+* 82% dos erros para iniciantes de programação
+
+## Comentários no JS
+
+// comentário em linha
+
+/* comentário em 
+bloco */
+
+## Tipos de dados
+
+Conforme o ECMAScript standard (orgão que padroniza o JavaScript) temos 9 tipos de dados.
+
+* Data types
+  * Primitive / Primitive value
+  * Structural
+  * Structural Primitive
+
+### Primitivos
+
+- String
+- Number
+- Boolean
+- Undefined
+- Symbol
+- BigInt
+
+### Estruturais
+
+- Object
+  - Array
+  - Map
+  - Set
+  - Date
+  - ...
+- Function
+
+### Primitivo Estrutural / Structural Root Primitive
+
+- null
+
+## String
+
+String é uma cadeia de caracteres.
+
+Usa-se um dos 3 exemplos abaixo:
+
+"" - aspas duplas
+'' - aspas simples
+`` - template literals ou template strings (duas crases). Permite multilinhas e cálculo de valores
+
+## Number
+
+33 - inteiros
+12.4 - reais / float
+NaN - Not a Number
+Infinity - infinito
+
+## Boolean
+
+Tipo de dado que tem dois valores. TRUE or FALSE
+
+## Undefined e Null
+
+> Undefined 
+- indefinido
+- não existe
+
+> Null 
+- nulo
+- objeto que existe mas não possui nada dentro
+- diferente de indefinido
+
+## Object
+
+> Object
+- Objeto
+- Propriedades / Atributos
+- Funcionalidades / Métodos
+
+{ propriedade: "valor"}
+
+Ex.:
+
+```js
+console.log({
+  name: "Jeziel",
+  age: 25,
+  andar: function() {
+    console.log("andar")
+  }
+})
+```
+
+## Arrays (vetores)
+
+É um grupamento de dados.
+
+Usa-se []
+
+```js
+console.log([
+  "Leite",
+  "Ovos",
+  2,
+  3
+])
+```
