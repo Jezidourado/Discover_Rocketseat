@@ -1,30 +1,30 @@
 # ================= HTML =================
 
-# ANATOMIA HTML
+# HTML ANATOMY
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <!--
         Lang = Language. 
-        Define a linguagem do documento. Vai ser identificado pelo browser para traduzir ou não a página
+        Defines the language of the document. Will be identified by the browser to translate the page if necessary.
     -->
   <head>
     <meta charset="UTF-8" />
     <!--
-    Meta = serve para representar varios tipos de meta-dados
-    charseat="utf-8" = serve para dizer que o documento aceita a maior parte de caracteres possivel
+    Meta = represents many types of meta-data
+    charseat="utf-8" = accepts many characters as possbile 
     -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--
-        A configuação acima do meta, diz que o conteúdo da página será visível tanto em dispositivos móveis como em desktops.
+        The config above says that the content are visible in mobile devices and desktops.
     -->
-    <title>Anatomia do documento</title>
+    <title>Document Anatomy</title>
   </head>
   <body>
-    <h1>Ajuste de rota</h1>
-    <p>A migração de um <b>engenheiro</b> para a área de tecnologia.</p>
+    <h1>Adjustment of route</h1>
+    <p>The migration of an <b>engennier</b> to the technology.</p>
   </body>
 </html>
 ```
@@ -32,9 +32,9 @@
 # FAVICON
 
 ```html
-<!--  <link> para ícones personalizados -->
+<!--  <link> for customized icons -->
 
-<!-- favicon básico -->
+<!-- basic favicon -->
 <link
   rel="icon"
   href="/icons/icon-48x48.png?v=cfca599cb367ccaf7377d56ddc7542f5"
@@ -53,13 +53,13 @@
   <meta name="author" content="Jeziel" />
   <meta
     name="description"
-    content="Um website para iniciantes em programação"
+    content="A website for programation begginers"
   />
-  <!--  description serve para a descrição do website na busca do Google -->
+  <!--  description is for the text description of the website on the google search -->
   <meta name="robots" content="index, follow" />
-  <!--  fala para os robos de busca indexarem e seguir links dentro da página -->
+  <!--  tell to the search robots index and follow link inside the page -->
   <meta name="robots" content="noindex, nofollow" />
-  <!--  fala para os robos de busca não indexarem e não seguir links dentro da página -->
+  <!-- tell to the search robots don't index and don't follow links inside the page -->
 </head>
 ```
 
@@ -67,7 +67,7 @@
 
 ```html
 <!-- 
-  <meta> redes sociais
+  <meta> for social websites
 -->
 
 <head>
@@ -76,10 +76,11 @@
     property="og:image"
     content="https://cdn-images-1.medium.com/max/92/1*TkXVfLTwsHdwpUEjGzdi9w@2x.jpeg"
   />
-  <!-- para buscar uma imagem -->
+  <!-- to search an image -->
   <meta
     property="og:description"
-    content="Aqui vem um texto para ser mostrado ao compartilhar no facebook"
+    content="Text to be showed on the share something on Facebook"
+    Aqui vem um texto para ser mostrado ao compartilhar no facebook"
   />
   <!-- para buscar uma descrição -->
   <meta property="og:title" content="Um site da Rocketseat" />
@@ -3192,3 +3193,91 @@ Exemplo:
   - camelCase: ao invésde colocar espaços na variável, escrever tudo junto com a primeira letra da próxima palavra em maísculo: myNameIsJeziel. A primeia palavra sempre em minusculo.
   - snake_case: usa _ ao invés de espaços entre as palavras: my_name_is_Jeziel
   - Escrever em inglês
+
+## Declaration assignment var
+
+```html
+  <script>
+    // declaration
+    var name
+
+    // assignment value (atribuição de valores)
+    name = 'Jeziel'
+
+    // what kind of data was put in the var
+    console.log(typeof name)
+  </script>
+  ```
+
+When we want discovery the type of data we type "typeof" and the name of var, like above. The browser answear is "string" in that case.
+
+## Grouping statements (agrupando declarações)
+
+```html
+<script>
+    var name
+    name = 'Jeziel'
+
+    let age, isHuman
+    age = 25
+    isHuman = true
+    console.log(name, age, isHuman)
+</script>
+```
+
+Return from browser - Jeziel 25 true
+
+## concatenating and interpolating variables
+
+### concatenating
+
+We can contacting variables when we need write some code with variables or variables and text, like bellow.
+
+```html
+  <script>
+    var name
+    name = 'Jeziel'
+
+    let age, isHuman
+    age = 25
+    isHuman = true
+
+    // multiple arguments on the function
+    // console.log(name, age, isHuman)
+    // writing of text + variables
+    // Contacting variables
+
+    // bellow we want have the value "The Jeziel have 25 yers"
+    console.log('The ' + name + ' have ' + age + ' years old.')
+  </script>
+  ```
+
+Return from browser - "The Jeziel have 25 years old."
+
+With this code, we can change the variables values and the console.log will automatically change
+
+### Interpolating
+
+The interpolating have the same function, but with differents commands.
+
+```html
+  <script>
+    var name
+    name = 'Jeziel'
+
+    let age, isHuman
+    age = 25
+    isHuman = true
+
+    // multiple arguments on the function
+    // console.log(name, age, isHuman)
+    // writing of text + variables
+    // contacting variables
+
+    // bellow we want have the value "The Jeziel have 25 yers"
+    console.log(`The ${name} have ${age} years.`)
+  </script>
+  ```
+  Return from browser - "The Jeziel have 25 years old."
+
+IMPORTANT: to interpolating we have to use the `` between the sentence.

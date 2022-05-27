@@ -490,4 +490,4 @@ The interpolating have the same function, but with differents commands.
   ```
   Return from browser - "The Jeziel have 25 years old."
 
-IMPORTANT: to interpolating we ave to use the `` between the sentence.
+IMPORTANT: to interpolating we have to use the `` between the sentence.
