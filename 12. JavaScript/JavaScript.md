@@ -387,7 +387,7 @@ Exemplo:
 ```html
 <script>
   let meu nome é = "Jeziel" // não fazer
-  console.log(eu sou o Jeziel)
+  console.log(meu nome é)
 </script>
 ```
 
@@ -403,3 +403,91 @@ Exemplo:
   - camelCase: ao invésde colocar espaços na variável, escrever tudo junto com a primeira letra da próxima palavra em maísculo: myNameIsJeziel. A primeia palavra sempre em minusculo.
   - snake_case: usa _ ao invés de espaços entre as palavras: my_name_is_Jeziel
   - Escrever em inglês
+
+## Declaration assignment var
+
+```html
+  <script>
+    // declaration
+    var name
+
+    // assignment value (atribuição de valores)
+    name = 'Jeziel'
+
+    // what kind of data was put in the var
+    console.log(typeof name)
+  </script>
+  ```
+
+When we want discovery the type of data we type "typeof" and the name of var, like above. The browser answear is "string" in that case.
+
+## Grouping statements (agrupando declarações)
+
+```html
+<script>
+    var name
+    name = 'Jeziel'
+
+    let age, isHuman
+    age = 25
+    isHuman = true
+    console.log(name, age, isHuman)
+</script>
+```
+
+Return from browser - Jeziel 25 true
+
+## concatenating and interpolating variables
+
+### concatenating
+
+We can contacting variables when we need write some code with variables or variables and text, like bellow.
+
+```html
+  <script>
+    var name
+    name = 'Jeziel'
+
+    let age, isHuman
+    age = 25
+    isHuman = true
+
+    // multiple arguments on the function
+    // console.log(name, age, isHuman)
+    // writing of text + variables
+    // Contacting variables
+
+    // bellow we want have the value "The Jeziel have 25 yers"
+    console.log('The ' + name + ' have ' + age + ' years old.')
+  </script>
+  ```
+
+Return from browser - "The Jeziel have 25 years old."
+
+With this code, we can change the variables values and the console.log will automatically change
+
+### Interpolating
+
+The interpolating have the same function, but with differents commands.
+
+```html
+  <script>
+    var name
+    name = 'Jeziel'
+
+    let age, isHuman
+    age = 25
+    isHuman = true
+
+    // multiple arguments on the function
+    // console.log(name, age, isHuman)
+    // writing of text + variables
+    // contacting variables
+
+    // bellow we want have the value "The Jeziel have 25 yers"
+    console.log(`The ${name} have ${age} years.`)
+  </script>
+  ```
+  Return from browser - "The Jeziel have 25 years old."
+
+IMPORTANT: to interpolating we ave to use the `` between the sentence.
