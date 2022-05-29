@@ -491,3 +491,64 @@ The interpolating have the same function, but with differents commands.
   Return from browser - "The Jeziel have 25 years old."
 
 IMPORTANT: to interpolating we have to use the `` between the sentence.
+
+## Object
+
+We can created objects with a pack of data, like bellow:
+In that case, the object is called "person"
+
+```html
+<script>
+    const person = {
+      name: 'Jhon',
+      age: 30,
+      weight: 89.5,
+      isAdmin: true
+    }
+    console.log(`${person.name} has ${person.age} years old and weight ${person.weight} pounds.`)
+</script>
+```
+Return from browser - Jhon has 30 years old and weight 89.5 pounds.
+
+## Arrays
+
+We also can access values inside the array:
+
+```html
+  <script>
+    const animals = [
+      'Lion',
+      'Monkey',
+      'Elephant',
+      'Skane'
+    ]
+    console.log(animals)
+  </script>
+  ```
+Return from browser - ['Lion', 'Monkey', 'Elephant', 'Skane']
+                      0: "Lion"
+                      1: "Monkey"
+                      2: "Elephant"
+                      3: "Snake"
+                      lenght: 4
+
+The browser enumerate the values starting from '0' and says on "lenght" the number os values we have.
+
+Using that proprierties, we can ask for values.
+Asking for "Elephant" value:
+
+```html
+  <script>
+    const animals = [
+      'Lion',
+      'Monkey',
+      'Elephant',
+      'Skane'
+    ]
+      
+    console.log(animals[2])
+  </script>
+```
+Return from browser - Elephant
+
+
