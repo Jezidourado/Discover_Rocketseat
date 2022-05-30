@@ -551,4 +551,133 @@ Asking for "Elephant" value:
 ```
 Return from browser - Elephant
 
+## Exercises 
 
+> 1. Declare one variable named weight
+
+```js
+let weight
+```
+
+> 2. What kind of data is the variable above? - Undefined
+
+```js
+console.log(typeof weight)
+```
+> 3. Declare one variable and asign values for every data:
+    - name: String
+    - age: Number (integer)
+    - stars: Number (float)
+    - isSubscribed: Boolean
+
+```js
+  let name: 'jeziDourado'
+  let age: 25
+  let stars: 4.87
+  let isSubscribed: true
+```
+ 
+> 4. The sdudent variable above is what kind of data? = object
+
+  > 4.1 Assign that variable the same properties and values of exercise 3
+
+  > 4.2 Show on console the menssage:
+
+    <name> with <age> years old weight <weigh> pounds.
+
+```js
+let student = {
+    name: "Jeziel Dourado",
+    age: 25,
+    weight: 74.85,
+    isSubscribed: true
+  }
+
+console. log(`${student.name} with ${student.age} years old weight ${student.weight} pounds.`)
+```
+
+> 5. Declare one array type variable, called students and assing to her no values, just the empty array.
+
+```js
+let students = []
+```
+
+> 6. Reassign value to the above variable, put inside of her the student object of the 4th question. (Don't copy and paste the object, but use the criated object and insert him on array)
+
+```js
+ students = [
+  student
+  student2
+] 
+
+console.log(students)
+```
+
+> 7. Put on console the value of position zero of above array.
+
+```js
+console.log(students[1])
+```
+
+> 8. Make a new student and put on position 1 of array student.
+
+```js
+const student2 = {
+  name: "Jhon",
+  age: 32,
+  weight: 89.6,
+  isSubscribed: false
+}
+
+console.log(students)
+```
+
+> 9. Without run the code, answer the browser answer of the code bellow and why. Afther that, run the code and see if you are right.
+
+```js
+  console.log(a)
+  var a = 1
+
+// Answer = undefined. 
+// It's because in the moment we run the console.log we dont have one variable declatered. Only if we up this variable above the console.log we will have the correctly answer, that is "1", like bellow.
+
+var a = 1
+console.log(a)
+```
+
+## Functions
+
+One function have the objective to save one group of code to reuse this code in futures aplications.
+
+Ex.:
+Lets created one application of motivational phrases:
+
+```js
+  console.log('Study is very good')
+  console.log('Patience and persistence')
+  console.log('Review is the mother of learning')
+  ```
+
+  If we run this codes on browser, we will have the answears, but we can't use in other aplications.
+
+  So, we have to save this information before, with function statments:
+
+```js
+  function createPhrases() {
+  console.log('Study is very good')
+  console.log('Patience and persistence')
+  console.log('Review is the mother of learning')
+}
+```
+
+The JS will save this function on his memory. The shortcut to this function is the name of her "createPhrases()".
+
+```js
+createPhrases()
+```
+
+When we run this shortcut, we have the answer:
+
+- Study is very good
+- Patience and persistence
+- Review is the mother of learning

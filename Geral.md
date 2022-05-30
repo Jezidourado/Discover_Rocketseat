@@ -3281,3 +3281,192 @@ The interpolating have the same function, but with differents commands.
   Return from browser - "The Jeziel have 25 years old."
 
 IMPORTANT: to interpolating we have to use the `` between the sentence.
+
+## Object
+
+We can created objects with a pack of data, like bellow:
+In that case, the object is called "person"
+
+```html
+<script>
+    const person = {
+      name: 'Jhon',
+      age: 30,
+      weight: 89.5,
+      isAdmin: true
+    }
+    console.log(`${person.name} has ${person.age} years old and weight ${person.weight} pounds.`)
+</script>
+```
+Return from browser - Jhon has 30 years old and weight 89.5 pounds.
+
+## Arrays
+
+We also can access values inside the array:
+
+```html
+  <script>
+    const animals = [
+      'Lion',
+      'Monkey',
+      'Elephant',
+      'Skane'
+    ]
+    console.log(animals)
+  </script>
+  ```
+Return from browser - ['Lion', 'Monkey', 'Elephant', 'Skane']
+                      0: "Lion"
+                      1: "Monkey"
+                      2: "Elephant"
+                      3: "Snake"
+                      lenght: 4
+
+The browser enumerate the values starting from '0' and says on "lenght" the number os values we have.
+
+Using that proprierties, we can ask for values.
+Asking for "Elephant" value:
+
+```html
+  <script>
+    const animals = [
+      'Lion',
+      'Monkey',
+      'Elephant',
+      'Skane'
+    ]
+      
+    console.log(animals[2])
+  </script>
+```
+Return from browser - Elephant
+
+## Exercises 
+
+> 1. Declare one variable named weight
+
+```js
+let weight
+```
+
+> 2. What kind of data is the variable above? - Undefined
+
+```js
+console.log(typeof weight)
+```
+> 3. Declare one variable and asign values for every data:
+    - name: String
+    - age: Number (integer)
+    - stars: Number (float)
+    - isSubscribed: Boolean
+
+```js
+  let name: 'jeziDourado'
+  let age: 25
+  let stars: 4.87
+  let isSubscribed: true
+```
+ 
+> 4. The sdudent variable above is what kind of data? = object
+
+  > 4.1 Assign that variable the same properties and values of exercise 3
+
+  > 4.2 Show on console the menssage:
+
+    <name> with <age> years old weight <weigh> pounds.
+
+```js
+let student = {
+    name: "Jeziel Dourado",
+    age: 25,
+    weight: 74.85,
+    isSubscribed: true
+  }
+
+console. log(`${student.name} with ${student.age} years old weight ${student.weight} pounds.`)
+```
+
+> 5. Declare one array type variable, called students and assing to her no values, just the empty array.
+
+```js
+let students = []
+```
+
+> 6. Reassign value to the above variable, put inside of her the student object of the 4th question. (Don't copy and paste the object, but use the criated object and insert him on array)
+
+```js
+ students = [
+  student
+  student2
+] 
+
+console.log(students)
+```
+
+> 7. Put on console the value of position zero of above array.
+
+```js
+console.log(students[1])
+```
+
+> 8. Make a new student and put on position 1 of array student.
+
+```js
+const student2 = {
+  name: "Jhon",
+  age: 32,
+  weight: 89.6,
+  isSubscribed: false
+}
+
+console.log(students)
+```
+
+> 9. Without run the code, answer the browser answer of the code bellow and why. Afther that, run the code and see if you are right.
+
+```js
+  console.log(a)
+  var a = 1
+
+// Answer = undefined. 
+// It's because in the moment we run the console.log we dont have one variable declatered. Only if we up this variable above the console.log we will have the correctly answer, that is "1", like bellow.
+
+var a = 1
+console.log(a)
+```
+
+## Functions
+
+One function have the objective to save one group of code to reuse this code in futures aplications.
+
+Ex.:
+Lets created one application of motivational phrases:
+
+```js
+  console.log('Study is very good')
+  console.log('Patience and persistence')
+  console.log('Review is the mother of learning')
+  ```
+
+  If we run this codes on browser, we will have the answears, but we can't use in other aplications.
+
+  So, we have to save this information before, with function statments:
+
+```js
+  function createPhrases() {
+  console.log('Study is very good')
+  console.log('Patience and persistence')
+  console.log('Review is the mother of learning')
+}
+```
+
+The js will save this function on his memory. The shortcut to this function is the name of her "createPhrases()".
+
+```js
+createPhrases()
+```
+
+When we run this shortcut, we have the answer:
+Study is very good
+Patience and persistence
+Review is the mother of learning
