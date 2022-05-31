@@ -29,7 +29,7 @@
 </html>
 ```
 
-# FAVICON
+## FAVICON
 
 ```html
 <!--  <link> for customized icons -->
@@ -41,7 +41,7 @@
 />
 ```
 
-# META SEO
+## META SEO
 
 ```html
 <head>
@@ -63,63 +63,65 @@
 </head>
 ```
 
-# META SOCIAL
+## META SOCIAL
+
+
+    <meta> for social media
+
 
 ```html
-<!-- 
-  <meta> for social websites
--->
 
 <head>
   <!-- Open Graph (og): facebook -->
+  <!-- to search a image -->
+
   <meta
     property="og:image"
     content="https://cdn-images-1.medium.com/max/92/1*TkXVfLTwsHdwpUEjGzdi9w@2x.jpeg"
   />
-  <!-- to search an image -->
+
+  <!-- to search a description -->
   <meta
     property="og:description"
     content="Text to be showed on the share something on Facebook"
-    Aqui vem um texto para ser mostrado ao compartilhar no facebook"
   />
-  <!-- para buscar uma descrição -->
-  <meta property="og:title" content="Um site da Rocketseat" />
 
-  <!-- para buscar um título -->
+  <!-- to search a title -->
+  <meta property="og:title" content="Site of Rocketseat" />
+
   <!-- Twitter -->
   <meta name="twitter:title" content="Rocketseat" />
-  <head>
-    <!-- Cada rede social tem sua especifidade (Facebook usa og; Twitter usa name) -->
-  </head>
+
+  <!-- Every social media had their own speciality (Facebook use 'og'; Twitter use 'name') -->
 </head>
 ```
 
-# ABREVIAÇÕES
+# ABBREVIATIONS
+
+Abbreviation example:
 
 ```html
 <abbr>
-  abreviação
-
+  
   <p>
-    Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.
-  </p>
+    We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our docs on web.
+  </p></abbr>
+```
+Details of contact (address) example:
 
-  <!--
- Detalhes de contato
-
+```html
  <address>
--->
 
   <address>
     <p>Jeziel Dourado</p>
     <p><b>Santa Bárbara d'Oeste, SP.</b></p>
-  </address></abbr>
+  </address>
 ```
 
-# CABEÇALHOS E PARÁGRAFOS
+# HEADINGS AND PARAGRAPHS (CABEÇALHOS E PARÁGRAFOS)
 
 ```html
-<h1>Sobre mim</h1>
+<h1>About me</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 <p>
   Optio aut esse quo deleniti nisi perferendis nihil consectetur ducimus
@@ -127,9 +129,9 @@
   adipisci sed quia!
 </p>
 
-<h2>Nascimento</h2>
+<h2>Birth</h2>
 
-<h3>Infância</h3>
+<h3>Child</h3>
 <p>
   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat neque
   dolorem laudantium, impedit corrupti perferendis optio assumenda. Atque
@@ -137,7 +139,7 @@
   blanditiis eveniet?
 </p>
 
-<h3>Adolescência</h3>
+<h3>Adolescence</h3>
 <p>
   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat neque
   dolorem laudantium, impedit corrupti perferendis optio assumenda. Atque
@@ -145,94 +147,89 @@
   blanditiis eveniet?
 </p>
 
-<h2>Trabalho</h2>
+<h2>Work</h2>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur,
 exercitationem tempora animi aut alias dolorum eaque sint, ab excepturi culpa ea
 sequi enim sed odio porro. Maiores, molestiae exercitationem.
 
-<a href="">Saiba mais</a>
+<a href="">Know more</a>
 ```
 
-# ELEMENTOS GENÉRICOS
+# GENERIC ELEMENTS
+
+    <div>- use to separete code into blocks
+    <span> - use to keep the code on the line, but skip lines on the code itself
 
 ```html
-<!-- Elementos genéricos
-
-    <div> - serve para separar o código em blocos
-    <span> - serve para manter o código em linha, porém pulando linha no código em si
--->
-
 <div class="Loja">
-  <div>Camiseta</div>
+  <div>T-shirt</div>
   <div>R$99,99</div>
 </div>
 
 <div class="Loja">
-  <span>Camiseta</span>
+  <span>T-shirt</span>
   <span>R$99,99</span>
 </div>
 ```
 
-# REPRESENTAÇÃO DE CÓDIGO
+# CODE REPRESENTATION
 
-```html
-<!-- 
-    Representando códigos de computador
+Representing codes of computer
 
     <code>
-        Partes gráficas de código
--->
+    Graphic parts of code
 
+```html
 <code> document.querySelector("boddy") </code>
+```
 
-<!--
-      <pre>
-          Blocos de código, pois essa tag mantém os espaços em branco e recuos que eu colocar no meu código
-  -->
+    <pre>
+    Code blocks. This tag keep spaces in blank and indents (recuos) that i put on my code.
 
+```html
 <pre>
       <code>
           document.
           querySelector("boddy")
-            </code>
+      </code>
   </pre>
 ```
 
-# TAGS E ATRIBUTOS
+# TAGS & ATTRIBUTES
+
+> Empty elements
 
 ```html
-<!--
-    Elementos vazios
--->
-
 <img src="" alt="" />
 <input type="text" />
+```
 
-<!--
-    Atributos HTML
--->
+> HTML attributes
 
+```html
 <img src="image.png" alt="Image1" />
+```
 
-<!--
-    Atributos Booleanos
-    Não precisam de conteúdo ex.: disabled
--->
+> Booleans attributes
+
+Don't need content. Ex.: disabled
+
+```html
 <input type="text" disabled />
+```
 
-<!--
-    Atributos globais mais utilizados
+> Global attributes most used
 
-    - class = serve para aplicar estilos CSS, classificar conteúdo e acessar no JavaScript
-    - contenteditable = diz se o conteúdo é editável ou não (true/false)
-    - data-* = pode ser adicionado por qualquer nome (Ex. data-id / data-qualquer-nome). Ajuda na logica.
-    - hidden = esconde o conteúdo
-    - id = da um código para o conteúdo
-    - style = estiliza o conteúdo
-    - tabindex = sequencia a navegação pelo TAB
-    - title = mostra um texto ao conteúdo ao passar o mouse em cima (ver Conteúdo 10)
--->
+- class = used to apply styles from CSS, classify content and access on JavaScript
+- contenteditable = says if the content is editable or not (true / false)
+- data-* = can be add for any name (Ex. data-id / data-any-name). Helps on logic.
+- hidden = hide the content
+- id = put a unic code for the content
+- style = stylizes the content
+- tabindex = sequence navegation by TAB
+- title = show one text to the content by passing up the mouse
 
+```html
 <div class="teste" contenteditable="true">Conteúdo1</div>
 
 <div class="teste" contenteditable="false">Conteúdo2</div>
@@ -252,265 +249,256 @@ sequi enim sed odio porro. Maiores, molestiae exercitationem.
 <div tabindex="2">Conteúdo9</div>
 
 <div title="Definir um título">Conteúdo10</div>
+```
 
-<!--
-    Alinhamento de tags
--->
+> TAGs alignment
 
-<p>Vou <em>escrever</em> um parágrafo</p>
+<p>I will <em>wrhite</em> one paragraph</p>
 
-<p>Esse é um novo parágrafo</p>
+<p>This is a new paragraph</p>
 
-<p>Texto1 Texto2 Texto3</p>
+<p>Text1 Text2 Text3</p>
 
-<p>Texto1 <br />Texto2 <br />Texto3</p>
+<p>Text1 <br />Text2 <br />Text3</p>
 
-<!--
-    Colocando em prática os conhecimentos
+> Practicing the knowledges
 
-    Escrever 2 parágrafos, dando ênfase e importância para algumas palavras e adicione um link de saiba mais.
+Write 2 paragraphs, emphasizing and importance to few words and add one link of "Learn more".
 
-    - use a tag "em" para ênfase
-    - use a tag "strong" para dar importância
-    - o link pode levar para o Google
--->
+- Use the TAG "em" to emphase
+- Use the TAG "strong" to give importance
+- The link can go to Google
 
-Colocando em prática
+-----------------------------------------
 
-<p>O <strong>Naruto</strong> pode ser <em>duro</em> as vezes</p>
+<p>I'm a <strong>Engennier</strong> recalculating my <em>route</em>!</p>
 
-<p>Freeza. Porquê você <strong>MATOU</strong> o <em>Kuririn</em>?</p>
+<p>Freeza. Why did you <strong>KILL</strong> the <em>Kuririn</em>?</p>
 
-<a href="https://google.com">Saiba mais sobre o Freeza.</a>
+<a href="https://www.google.com/search?q=freeza&rlz=1C1GCEU_pt-BRBR935BR936&oq=freeza&aqs=chrome..69i57j46i512j0i433i512j0i433j0i512l2j46i433i512j0i512l3.1594j0j7&sourceid=chrome&ie=UTF-8">Learn more about Freeza.</a>
 
-<!--
-    Conteúdo do texto e caracteres reservados.
--->
+--------------------------------------------
 
-<p>Espaçamento</p>
-<p>O texto só é espaçado quando utilizamos caracteres especiais</p>
+> Text content and reserved characters
+
+<p>Spacing</p>
+<p>The text only can be spaced when we use speciais characters</p>
 <p>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O texto só é espaçado quando utilizamos
-  caracteres especiais
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The text only can be spaced when we use speciais characters
 </p>
 
-<p>Caracteres reservados</p>
+<p>Reserveds characters</p>
 
 <p>&lt; &gt; &quot; &apos; &amp;</p>
 ```
 
 # HYPERLINKS
 
-Hyeperlinks - Elemento Âncora:
+Hyeperlinks - Anchor element:
 
 ```html
 <a></a>
 ```
 
-        + Anatomia
++ Anatomy
 
-        + Atributos:
-            - globais (tittle, id, class...)
-            - href
-                - para onde iremos, quando clicar
-                    - url completa (website)
-                    - email
-                    - telefone
-                    - fragmento
-            - download
-            - target
-                - _self (padrão)
-                - _blank
++ Attributes:
+  - globals (tittle, id, class...)
+  - href
+    - where we go when click
+      - url (website)
+      - email
+      - telephone
+      - fragment
+  - download
+  - target
+    - _self (pattern)
+    - _blank
 
-## Atributos globais
+## Global attributes
 
 (tittle, id, class...)
 
-## Atributos href
+## href attributes
 
 ```html
-website / e-mail / telefone
+website / e-mail / telephone
 
 <p>Find-me:</p>
 
 <ul>
   <li><a href="https://google.com.br" target="_blank">Website</a></li>
   <!--
-      Neste caso, target="_blank" leva à pagina abrindo outra aba,
-      permanecendo a página de origem. Sem esse atributo, o link
-      é aberto na mesma aba, saindo da página de origem.
+      In that case, target="_blank" leads to the page open another tab, remaining origin page. Without this attribute, the link is open in the same tab, leaving the origin page.
   -->
   <li><a href="malito:jezieldourado@outlook.com">Email</a></li>
-  <li><a href="tel:+5519992166970">Telefone</a></li>
+  <li><a href="tel:+5519992166970">Telephone</a></li>
 </ul>
 ```
 
-## FRAGMENTO
+## FRAGMENT
 
 ```html
-<p>Saiba mais</p>
+<p>Find out</p>
 <ul>
-  <li><a href="#about">Sobre mim</a></li>
+  <li><a href="#about">Find out about it</a></li>
   <li><a href="#history">Email</a></li>
-  <li><a href="#works">Trabalhos</a></li>
+  <li><a href="#works">Works</a></li>
 </ul>
 
 <!--
-  os fragmentos (Ex.:#about) servem para, ao clicar no link desejado, 
-  a página leva o usuário exatamente ao trecho referente na página.
-  OBS: o fragmento fica no final do link, exemplo usando works 
-  (file:///C:/Users/cf426774/Desktop/HD/Works/Starter-html/hyperlinks.htm#works)
+  The fragments (Ex.:#about) are for take the user exacly to the reffering section on the page, on click.
+  PS: the fragment stays in the end of link, for example using words (file:///C:/Users/cf426774/Desktop/HD/Works/Starter-html/hyperlinks.htm#email)
 -->
 
-<h1 id="about">Sobre mim</h1>
+<h1 id="about">About me</h1>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sit, quaerat
 adipisci ad dolore inventore nisi fugit libero corrupti ex iste maxime
 praesentium culpa, dolorem autem recusandae fuga labore possimus.
 
-<h2 id="history">História</h2>
+<h2 id="history">History</h2>
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quo ab, aut
 tenetur similique qui at. Ea, mollitia quod. Necessitatibus natus culpa
 cupiditate ipsa, ipsum cumque modi corrupti quisquam obcaecati?
 
-<h2 id="works">Trabalhos</h2>
+<h2 id="works">Works</h2>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati quod
 facilis fuga ipsum cumque minus facere id vero est veritatis dolorem
 necessitatibus expedita perspiciatis iste, officia porro ea aperiam?
 ```
 
-## CONTEÚDO DOS HYPERLINKS
+## HYPERLINKS CONTENT 
 
-- posso colocar qualquer conteúdo. Os diversos tipos de links abaixo levam ao mesmo endereço 
+- Can we put any content. The many type of links bellow take to the same address.
 ```html
 <a href="https://google.com" title="Ir para o Google">
   <h1>Google</h1>
-  <p>Link para o site da Google</p>
+  <p>Link to the Google's website</p>
   <img src="https://source.unsplash.com/random" alt="" />
 </a>
 ```
 
 ## URLs E CAMINHOS DOS ARQUIVOS
 
-- URL - Uniform Resource Locator - https://google.com 
-- Sequência de texto que define onde algo está localizado na web 
-- URL usam caminhos para encontrar
-arquivos 
-- Caminhos dos arquivos onde, no explorador de arquivos, um recurso
-está localizado 
+- URL - Uniform Resource Locator - https://google.com.br 
+- Sequence of text that define where something is located on web
+- URL use paths to find files 
+- File's paths where one resources is located on the file explorer
 
-### Caminho dos arquivos
+### File's paths
 
 ```html
-<a href="hyperlinks.htm">Abrir documento Hyperlinks</a>
+<a href="hyperlinks.htm">Open Hyperlinks documents</a>
 ```
-Neste caso, o link foi direto para este documento.
+In that case, the link above was direc to this document.
 
 ### URLs
 
 ```html
-<a href="https://google.com">Abrir o Google</a>
+<a href="https://google.com">Open the Google</a>
 ```
-### Navegando pelos diretórios
+### Navigating through directories
 
-> Como navegar pelos caminhos?
-  - mesmo diretório
-  - entrando em diretórios
-  - saindo de diretórios
-  - diretório raiz (root ou pai)
+> How to browse by the paths?
+  - same directory
+  - entering directories
+  - leaving directories
+  - root directories (root)
 
 ```html
-<a href="../elementos-genericos.html">arquivo na pasta anterior</a>
+<a href="../elementos-genericos.html">file in the previous folder</a>
 
-<a href="./hyperlinks.htm">arquivo no diretório raiz (este doc)</a>
+<a href="./hyperlinks.htm">file in the root directory (this doc)</a>
 
-<a href="listas.html">arquivo na mesma pasta</a>
+<a href="listas.html">file in the same folder</a>
 
-<a href="../citações/citacoes2.html">arquivo na pasta citações</a>
+<a href="../citações/citacoes2.html">file in the citations folder</a>
 ```
 
-# LISTAS
+# LISTS
 
-Listas não ordenadas
+> Not ordinated lists
 
-```html
-<h1>Suco Detox</h1>
 
-<h2>Ingredientes:</h2>
+<h1>Detox juice</h1>
+
+<h2>Ingredients:</h2>
 <p>
 <ul>
-    <li>3 laranjas;</li>
-    <li>2 folhas de couve;</li>
-    <li>1 pedaço pequeno de gengibre;</li>
-    <li>1 beterraba;</li>
-    <li>Adoçante a gosto;</li>
-    <li>Gelo a gosto.</li>
+    <li>3 oranges;</li>
+    <li>2 cabbage leafs;</li>
+    <li>1 small piece of ginger;</li>
+    <li>1 beet;</li>
+    <li>Sweetener;</li>
+    <li>Ice.</li>
 </ul>
 </p>
-```
-Listas ordenadas
 
-```html
-<h1>Suco Detox</h1>
 
-<h2>Ingredientes:</h2>
+> Ordinated lists
+
+
+<h1>Detox juice</h1>
+
+<h2>Ingredients:</h2>
 <p>
 <ol>
-    <li>3 laranjas;</li>
-    <li>2 folhas de couve;</li>
-    <li>1 pedaço pequeno de gengibre;</li>
-    <li>1 beterraba;</li>
-    <li>Adoçante a gosto;</li>
-    <li>Gelo a gosto.</li>
+    <li>3 oranges;</li>
+    <li>2 cabbage leafs;</li>
+    <li>1 small piece of ginger;</li>
+    <li>1 beet;</li>
+    <li>Sweetener;</li>
+    <li>Ice.</li>
 </ol>
 </p>
-```
-Listas de descrição
 
-    <dl> - description list = lista de descrição
-    <dt></dt> - description text = texto de descrição
-    <dd></dd> - description = descrição em si
+> Description lists
 
-Objetivo: marcar um conjunto de itens e suas descrições
+    <dl> - description list
+    <dt></dt> - description text
+    <dd></dd> - description itself
 
-```html
-<h2>Glossário</h2>
+Objective: mark a set of items and their descriptions
+
+
+<h2>Glossary</h2>
 <dl>
-    <dt>Hypertext</dt>
-    <dd>É um hiper texto com possibilidades...</dd>
+  <dt>Hypertext</dt>
+  <dd>Is one text with possibilities...</dd>
 
-    <dt>Markup</dt>
-    <dd>Marcação de texto...</dd>
+  <dt>Markup</dt>
+  <dd>Text marking...</dd>
 
-    <dt>Language</dt>
-    <dd>Linguagem com sua semântica e sintaxe...</dd>
+  <dt>Language</dt>
+  <dd>Language with its semantics and syntax...</dd>
 </dl>
-```
+
 
 # URL
 
-URLs absulutos vs relativos
+URLs absulute vs relative
 
-    - Absolutos
-        -inclui protocolo e nome de domínio
+    - Absolute
+        - includes protocol and the name of domain
             - http://google.com.br
-        - sempre apontará para o mesmo local, pois é absoluto
+        - aways points to the same place, because is absolute
 
-    - Relativos
-        - relativo à página aberta no momento
-        - apontará para lugares diferentes
+    - Relative
+        - relative to the page open at the moment
+        - poits to differents places
 
 ```html
-<a href="google.com.br">relativo: ir para o Google</a>
+<a href="google.com.br">relative: go to Google</a>
 <br />
-<a href="https://google.com.br">absoluto: ir para o Google</a>
+<a href="https://google.com.br">absolute: go to Google</a>
 ```
 
-# CITAÇÕES
+# QUOTES (CITAÇÕES)
 
-Citações
+Quotes
 
 ```html
-<blockquote> (aspas)
+<blockquote> quotation marks (aspas)
 ```
 
 ```html
@@ -518,83 +506,67 @@ Citações
   cite="https://www.uol.com.br/esporte/futebol/central-de-jogos/#/25-04-2022"
 >
   <!--
-      cite = atributo para referenciar a URL da citação.
+      cite = attribute to referencie the citation URL.
   -->
+  ```
   <p>
-    O <strong>Elemento HTML <code>&lt;blockquote&gt;</code> </strong> (ou
-    <em>HTML Block Quotation Element</em>) indica que um texto externo foi
-    citado.
-    <!--
-      code = atributo utilizado para representar um código (em amarelo).
-  --></p>
+    The <strong>HTML element<code>&lt;blockquote&gt; </code></strong>(or <em>HTML Block Quotation Element</em>) indicates that a extern text was quoted.
+    
+    code = atribute used to represents one code (yellow).
+
+</p>
 </blockquote>
-
-<!--
-      Citações
-      <cite>
-  -->
-
 <p>
-  De acordo com
+  According to
   <a
     href="https://www.uol.com.br/esporte/futebol/central-de
       -jogos/#/25-04-2022"
-    ><cite>página MDN blockquote</cite></a
+    ><cite>MDN blockquote</cite></a
   >:
 </p>
 
-<!--
-      Citações
-      <cite>
-  -->
+> Quotes &lt;cite&gt;
 
-<p>
-  O elemento quote - <code>&lt;q&gt;</code> - é
+
+  The element quote - <code>&lt;q&gt;</code> - is used to shorts quotes that dont need paragraphs or line brokes.
+  ```html
   <q
-    cite="https://www.uol.com.br/esporte/futebol/central-de-jogos/#/25-04-2022"
-  >
-    usado para citações curtas que não precisam de parágrafos ou quebras de
-    linha.</q
-  >
-  --
-  <a
-    href="https://www.uol.com.br/esporte/futebol/
-      central-de-jogos/#/25-04-2022"
-  >
-    <cite>MDN q page</cite></a
-  >.
-</p>
+    cite="https://www.uol.com.br/esporte/futebol/central-de-jogos/#/25-04-2022">
+  </q
+
+  <a href="https://www.uol.com.br/esporte/futebol/central-de-jogos/#/25-04-2022">
+  <cite>MDN q page</cite></a></p>
 ```
 
-# TABELAS
+# TABLES
 
-```html
-<!--
-      <table>
-  
-      PRÓS
-      - Visualização de dados via linhas e colunas
-      - Boa acessibilidade para leitura dos dados
-  
-      CONTRAS
-      - Pouco flexível
-      - Precisa de estilização para melhor visualização
-  
-      NÃO USAR
-      - Para criação de layout
-  -->
+&lt;table&gt;
 
-<!--tr = table row = linha 
-      th = table header = cabeçalho
-      caption = legenda
-      tfoot = rodapé
-      -->
+>PROS
 
-TABELA SIMPLES
+- Data visualization by columns and rows
+- Good acessibility to read data
+
+>CONS
+
+- Not flexible
+- Need stylizing to better view
+
+> DO NOT USE
+
+- To layouts criations
+
+> TR
+- tr = table row = rows
+  - th = table header = cabeçalho
+  - caption = legend
+  - tfoot = footer (rodapé)
+
+SIMPLE TABLE
 
 <table>
   <caption>
-    Nome por idade
+    <b>Name by age</b>
   </caption>
 
   <thead>
@@ -623,16 +595,13 @@ TABELA SIMPLES
   </tfoot>
 </table>
 
-TABELA COMPLEXA
+COMPLEX TABLE
 
-<!--
-    2 lojas
-      Quantos produtos foram produzidos, quantos vendidos e agrupado por nome dos produtos.
-  -->
+2 SHOPS - How many products were produced, how many sold and grouped by product name.
 
 <table>
   <caption>
-    Produzidos x Vendidos por Loja
+    Produced x Sold by shop
   </caption>
 
   <colgroup>
