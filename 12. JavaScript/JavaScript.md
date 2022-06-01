@@ -681,3 +681,70 @@ When we run this shortcut, we have the answer:
 - Study is very good
 - Patience and persistence
 - Review is the mother of learning
+
+# Arguments and parameters
+
+Parameters is the function itself. Arguments are the data for those parameters defined before (or after).
+
+Ex.:
+
+```js
+// parameters
+const sum = function(number1, number2) {
+      console.log(number1 + number2)
+}
+
+// arguments
+sum(2, 3)
+// Browser answer = 5
+```
+
+If we put the console.log outside the {} of "parameters" will happened an error of reference.
+
+## Returning values into the function
+
+```js
+const sum = function(number1, number2) {
+      console.log(number1 + number2)
+}
+
+// arguments
+let number1 = 34
+let number2 = 25
+
+console.log(`the number 1 is ${number1}`)
+console.log(`the number 2 is ${number2}`)
+console.log(`the sum is ${sum(number1, number2)}`)
+```
+
+The browser answer  - the number is 34
+                    - the number is 25
+                    - 59
+                    - the sum is undefined
+
+This way we don't have the correct answer.
+
+The expression above happened because when the browser find the last console.log, he return (under the cloths) first the sum (59), and after calculate the function "the sum is...", without the result.
+
+To correct this error, we criated one variable "total" that will receive the function (number1 + number2) and will return the expression inside the console.log, like bellow.
+
+```js
+const sum = function(number1, number2) {
+  let total = number1 + number2
+      return total
+}
+
+// arguments
+let number1 = 34
+let number2 = 25
+
+console.log(`the number 1 is ${number1}`)
+console.log(`the number 2 is ${number2}`)
+console.log(`the sum is ${sum(number1, number2)}`)
+```
+
+The browser answer  - the number is 34
+                    - the number is 25
+                    - the sum is 59
+
+Is very important never forgot to use one variable before some data, in this case the "let total". That situation can caused a big problem in the  future.
