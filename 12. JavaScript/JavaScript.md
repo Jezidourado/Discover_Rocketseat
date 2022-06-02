@@ -748,3 +748,245 @@ The browser answer  - the number is 34
                     - the sum is 59
 
 Is very important never forgot to use one variable before some data, in this case the "let total". That situation can caused a big problem in the  future.
+
+## Another way to understand functions
+
+Lets make a juice
+
+```js
+// function is a blender (liquidificador)
+
+function makeJuice(fruit1, fruit2) {
+  return 'juice of: ' + fruit1 + fruit2
+}
+
+const copo = makeJuice('banana', ' apple')
+
+console.log(copo)
+```
+
+Browser return: juice of: banana apple
+
+## Function scope
+
+```js
+let subject
+
+function createThink(subject) {
+  return subject
+}
+
+console.log(subject)
+console.log(createThink(subject))
+```
+Browser return: Undefined
+                Undefined
+
+In that case we dont specify a value to the variable, so he dont have any data to be showed on the console.
+
+```js
+let subject = 'create video'
+
+function createThink(subject) {
+  return subject
+}
+
+console.log(subject)
+console.log(createThink(subject))
+```
+Browser return: create video
+                create video
+
+Here the variable was specify, and we have one positive return.
+
+```js
+let subject = 'create video'
+
+function createThink(subject) {
+  subject = 'study'
+  return subject
+}
+
+console.log(subject)
+console.log(createThink(subject))
+```
+Browser return: create video
+                study
+
+Now we have one value to the function variable. Only the console.log function's will received the value 'study'. In that case we have an separation of data. The 1st console,log is referent to the 'let' variable. 
+It's means that is thwo diferents scopes.
+
+Doesn't metters if we inverter the console.log, we will have the same answer, but inverted.
+
+```js
+let subject = 'create video'
+
+function createThink() {
+  subject = 'study'
+  return subject
+}
+
+console.log(createThink(subject))
+console.log(subject)
+```
+Browser return: study
+                study
+
+But, if we inverted the console.log and not specify the variable on the function, the JS will read the 1st console.log, return the subject on the function ('study') and make the next console.log like the function.
+
+```js
+let subject
+
+function createThink() {
+  subject = 'study'
+  return subject
+}
+
+console.log(subject)
+console.log(createThink())
+console.log(subject)
+```
+Browser return: undefined
+                study
+                study
+
+In the example above, we dont specify the value of the 1st variable and the function variable. So, the 1st console.log is undefined, the 2nd create a think and return the subject 'study', and the 3rd repeat the previows subject 'study'.
+
+## Function hoisting (elevação)
+
+```js
+sayMyName()
+
+function sayMyName() {
+  console.log('Jeziel')
+}
+```
+Return - Jeziel
+
+Here hapened a function hoisting, it means that the JS run (under the cloths) the function parameters and after run the function sayMyName()
+Is like the JS have this behavior:
+```js
+function sayMyName() {
+  console.log('Jeziel')
+}
+
+  sayMyName()
+```
+
+In the other hand, the hoisting doesn't happend when we have one variable before the function, like bellow:
+
+```js
+sayMyName()
+
+const sayMyName = function() {
+  console.log('Jeziel')
+}
+```
+Browser answer - Uncaught ReferenceError: Cannot access 'sayMyName' before initialization.
+
+Using let or var the same error apears. Because the function was not specify yet.
+
+## Arrow function
+
+=> arrow
+
+It is the other way to write function, letting the code more clean.
+
+```js
+const sayMyName = () => {
+  console.log('Jeziel')
+}
+
+sayMyName()
+```
+Return - Jeziel
+
+Using the arrow function, we dont need write the word "function".
+
+## Callback function
+
+We can criated 2 or more functions and callback (chamar de volta) one function inside the other, like bellow:
+
+```js
+function sayMyName(name) {
+  console.log('before execute the function callback')
+
+  name()
+
+  console.log('after execute the function callback')
+}
+
+sayMyName(
+  () => {
+    console.log('I am in a callback')
+  }
+)
+```
+Return -  before execute the function callback
+          I am in a callback
+          after execute the function callback
+
+Resume: 
+- The JS run the 1st console.log;
+- Run the function 'name', that have a callback
+- Run the 2nd console.log
+
+## Function constructor
+
+- expression new
+- criated a new object
+- this keyword
+
+```js
+function Person(name) {
+  this.name = name
+}
+
+const joao = new Person("Joao")
+const mary = new Person("Mary")
+console.log(joao)
+console.log(mary)
+```
+Return -  Person {name: 'Joao'}
+          Person {name: 'Mary'}
+
+The expression new is an construction function, and will return a new object.
+
+So, the object "Person" has a propertie "name".
+
+We also can put others functions inside the object:
+
+```js
+function Person(name) {
+  this.name = name
+  this.walk = function() {
+    return "walking"
+  }
+}
+
+const joao = new Person("Joao")
+const mary = new Person("Mary")
+console.log(joao.walk())
+console.log(mary.walk())
+```
+Return -  walking
+          walking
+
+
+Let's have a full prhase with the function:
+
+```js
+function Person(name) {
+  this.name = name
+  this.walk = function() {
+    return this.name + " is walking"
+  }
+}
+
+const joao = new Person("Joao")
+const mary = new Person("Mary")
+console.log(joao.walk())
+console.log(mary.walk())
+```
+Return -  Joao is walking
+          Mary is walking
