@@ -990,3 +990,35 @@ console.log(mary.walk())
 ```
 Return -  Joao is walking
           Mary is walking
+
+# Manipulating data
+
+## Prototype
+
+__proto__
+
+Protótipo. Prototype is something thas was created before.
+
+When we created any code on JS, like an object, the JS have a list of prototype, like bellow:
+
+```js
+{} //object
+```
+Return - {}
+[[Prototype]]: Object
+constructor: ƒ Object()
+hasOwnProperty: ƒ hasOwnProperty()
+isPrototypeOf: ƒ isPrototypeOf()
+propertyIsEnumerable: ƒ propertyIsEnumerable()
+toLocaleString: ƒ toLocaleString()
+toString: ƒ toString()
+valueOf: ƒ valueOf()
+__defineGetter__: ƒ __defineGetter__()
+__defineSetter__: ƒ __defineSetter__()
+__lookupGetter__: ƒ __lookupGetter__()
+__lookupSetter__: ƒ __lookupSetter__()
+__proto__: (...)
+get __proto__: ƒ __proto__()
+set __proto__: ƒ __proto__()
+
+Example whit an String:

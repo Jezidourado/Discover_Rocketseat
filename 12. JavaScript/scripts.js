@@ -105,7 +105,7 @@ const mary = new Person("Mary")
 console.log(joao)
 console.log(mary)
 
-*/
+
 
 function Person(name) {
   this.name = name
@@ -118,3 +118,7 @@ const joao = new Person("Joao")
 const mary = new Person("Mary")
 console.log(joao.walk())
 console.log(mary.walk())
+
+*/
+
+{}
