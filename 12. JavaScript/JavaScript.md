@@ -999,6 +999,10 @@ __proto__
 
 Protótipo. Prototype is something thas was created before.
 
+JavaScript is an language based in prototypes. 
+
+Ex.: If we wanted count how many letters have in one word, we need created an formule ou tag to count this letters. But the JavaSctipt already have (under the cloths) prototypes (called prototype chain) taht can bring this information to us, automaticly.
+
 When we created any code on JS, like an object, the JS have a list of prototype, like bellow:
 
 ```js
@@ -1022,3 +1026,91 @@ get __proto__: ƒ __proto__()
 set __proto__: ƒ __proto__()
 
 Example whit an String:
+
+.__proto__ will bring all possibilities of data we can bring to our code as prototype.
+
+```js
+"Jeziel".__proto__
+```
+Return - 
+      String {'', constructor: ƒ, anchor: ƒ,   big: ƒ, blink: ƒ, …}
+      anchor: ƒ anchor()
+      at: ƒ at()
+      big: ƒ big()
+      blink: ƒ blink()
+      bold: ƒ bold()
+      charAt: ƒ charAt()
+      charCodeAt: ƒ charCodeAt()
+      codePointAt: ƒ codePointAt()
+      concat: ƒ concat()
+      constructor: ƒ String()
+      endsWith: ƒ endsWith()
+      fixed: ƒ fixed()
+      fontcolor: ƒ fontcolor()
+      fontsize: ƒ fontsize()
+      includes: ƒ includes()
+      indexOf: ƒ indexOf()
+      italics: ƒ italics()
+      lastIndexOf: ƒ lastIndexOf()
+      length: 0
+      link: ƒ link()
+      localeCompare: ƒ localeCompare()
+      match: ƒ match()
+      matchAll: ƒ matchAll()
+      normalize: ƒ normalize()
+      padEnd: ƒ padEnd()
+      padStart: ƒ padStart()
+      repeat: ƒ repeat()
+      replace: ƒ replace()
+      replaceAll: ƒ replaceAll()
+      search: ƒ search()
+      slice: ƒ slice()
+      small: ƒ small()
+      split: ƒ split()
+      startsWith: ƒ startsWith()
+      strike: ƒ strike()
+      sub: ƒ sub()
+      substr: ƒ substr()
+      substring: ƒ substring()
+      sup: ƒ sup()
+      toLocaleLowerCase: ƒ toLocaleLowerCase()
+      toLocaleUpperCase: ƒ toLocaleUpperCase()
+      toLowerCase: ƒ toLowerCase()
+      toString: ƒ toString()
+      toUpperCase: ƒ toUpperCase()
+      trim: ƒ trim()
+      trimEnd: ƒ trimEnd()
+      trimLeft: ƒ trimStart()
+      trimRight: ƒ trimEnd()
+      trimStart: ƒ trimStart()
+      valueOf: ƒ valueOf()
+      Symbol(Symbol.iterator): ƒ [Symbol.iterator]()
+      [[Prototype]]: Object
+      [[PrimitiveValue]]: ""
+
+## Using the prototype
+
+```js
+"Jeziel".length
+```
+
+Return - 6
+
+Here, to count how many letters I have in the word "Jeziel", is just put the .length on front, and we will have the return "6".
+
+## Type conversion (typecasting) vs Type coersion
+
+- Type coersion - It's up to JS change the kind of data  to make senses to the code. In that case, the JS concatenated the string and the number, and joined the both data, returning "95".
+
+```js
+console.log('9' + 5)
+```
+Return - 95
+
+- Type conversion - It's up to user change one kind of data to make senses to the code. In that case 
+
+```js
+console.log(Number('9') + 5)
+```
+Return - 14
+
