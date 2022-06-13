@@ -1,5 +1,20 @@
 # git-practice
 
+CRIAR UM REPOSITÓRIO
+
+1. Abrir o Git na pasta de origem clicando com o botão direito do mouse em "Git Bash Here"
+2. git init
+3. git commit -m "first commit"
+4. git branch -M main
+5. git remote add origin https://github.com/Jezidourado/test.git
+6. git push -u origin main
+
+ATUALIZAR UM REPOSITÓRIO APÓS RENOMEAR OU MUDAR DE PASTA
+
+git pull --rebase origin main
+git log
+git push -u origin main
+
 PUBLUCAR UM ARQUIVO NO GITHUB (main)
 
 1. Abrir o Git na pasta de origem clicando com o botão direito do mouse em "Git Bash Here"
