@@ -55,7 +55,7 @@ function sayMyName() {
   console.log('Jeziel')
 }
 
-
+// function hoisting
 
 sayMyName()
 
