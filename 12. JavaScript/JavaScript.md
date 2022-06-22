@@ -192,7 +192,6 @@ Ex. de uma variável fortemente tipada:
 
 - O escopo determina a visibilidade de alguma variável no JS
 
-
 ## Block statement (declaração de bloco)
 
 {
@@ -226,12 +225,12 @@ console.log('> existe x depois do bloco?', x)
 Ao rodar este código, temos a seguinte resposta :
 
 > existe x antes do bloco? undefined
-scripts.html:20 > existe x depois do bloco? 0
+> existe x depois do bloco? 0
 
 Ou seja, a variável **var** x existe antes do bloco {}, porém ainda não há um valor definido. Após o bloco ela existe e tem valor definido.
 Isso ocorre pois debaixo dos panos o JS sobe a variável **var** para cima do primeiro console.log, mesmo que sem um valor definido.
 
-Isso faz com que a variável **var** seja uma variável perigosa de se usar, justamente com conta de seu dinamismo.
+Isso faz com que a variável **var** seja uma variável perigosa de se usar, justamente por conta de seu dinamismo.
 
 ## scope let e const
 
@@ -249,7 +248,7 @@ console.log('> existe x antes do bloco?', x)
 ```
 
 Ao rodar este código, temos a seguinte resposta: 
-scripts.html:13 Uncaught ReferenceError: x is not defined at scripts.html:13:47
+Uncaught ReferenceError: x is not defined at scripts.html:13:47
 **Erro de referência**
 
 ```html
@@ -275,7 +274,7 @@ console.log('> existe x depois do bloco?', x)
 ```
 Ao rodar este código, temos a seguinte resposta: 
 existe x? 0
-scripts.html:16 Uncaught ReferenceError: x is not defined at scripts.html
+Uncaught ReferenceError: x is not defined at scripts.html
 **Variável encontrada apenas para o primeiro console.log**
 
 ```html
@@ -400,7 +399,7 @@ Exemplo:
 > Ideal:
   - Criar nomes que fazem sentido
   - Que explique o que a variavel é ou faz
-  - camelCase: ao invésde colocar espaços na variável, escrever tudo junto com a primeira letra da próxima palavra em maísculo: myNameIsJeziel. A primeia palavra sempre em minusculo.
+  - camelCase: ao invésde colocar espaços na variável, escrever tudo junto com a primeira letra da próxima palavra em maísculo: myNameIsJeziel. A primeira palavra sempre em minusculo.
   - snake_case: usa _ ao invés de espaços entre as palavras: my_name_is_Jeziel
   - Escrever em inglês
 
@@ -418,6 +417,7 @@ Exemplo:
     console.log(typeof name)
   </script>
   ```
+Browser return - string
 
 When we want discovery the type of data we type "typeof" and the name of var, like above. The browser answear is "string" in that case.
 
@@ -485,7 +485,7 @@ The interpolating have the same function, but with differents commands.
     // contacting variables
 
     // bellow we want have the value "The Jeziel have 25 yers"
-    console.log(`The ${name} have ${age} years.`)
+    console.log(`The ${name} have ${age} years old.`)
   </script>
   ```
   Return from browser - "The Jeziel have 25 years old."
@@ -577,7 +577,7 @@ console.log(typeof weight)
   let isSubscribed: true
 ```
  
-> 4. The sdudent variable above is what kind of data? = object
+> 4. The sdudent variable bellow is what kind of data? = object
 
   > 4.1 Assign that variable the same properties and values of exercise 3
 
@@ -616,7 +616,7 @@ console.log(students)
 > 7. Put on console the value of position zero of above array.
 
 ```js
-console.log(students[1])
+console.log(students[0])
 ```
 
 > 8. Make a new student and put on position 1 of array student.
@@ -1001,7 +1001,7 @@ Protótipo. Prototype is something thas was created before.
 
 JavaScript is an language based in prototypes. 
 
-Ex.: If we wanted count how many letters have in one word, we need created an formule ou tag to count this letters. But the JavaSctipt already have (under the cloths) prototypes (called prototype chain) taht can bring this information to us, automaticly.
+Ex.: If we wanted count how many letters have in one word, we need created an formule or tag to count this letters. But the JavaSctipt already have (under the cloths) prototypes (called prototype chain) taht can bring this information to us, automaticly.
 
 When we created any code on JS, like an object, the JS have a list of prototype, like bellow:
 
@@ -1114,5 +1114,167 @@ console.log(Number('9') + 5)
 ```
 Return - 14
 
+## Strings in numbers
 
+We can manipulate strings and number transforming strings in number and numbers in strings, like bellow:
+
+```js
+let string = "123"
+console.log(Number(string))
+```
+Browser return - 123
+
+```js
+let number = 321
+console.log(String(number))
+```
+Browser return - 321
+
+### Counting chacacters and digits
+
+Lets count how many chatacters have an word and how many digts have an number:
+
+```js
+let word = "Paralelepipedo"
+console.log(word.length)
+```
+Console - 14
+
+```js
+let number
+console.log(number.length)
+```
+Console - Error
+
+This error apears because the number doesn't receive lenght. But we can solve this error by transforming the number in string, like bellow:
+
+```js
+let number = 1234
+console.log(String(number).length)
+```
+Console - 4
+
+IMPORTANT: The function name bellow "String" have to start with the first letter uppercase. If we write in lowercase "string" we will have an error.
+
+## Decimal numbers
+
+> Transforming an broken number (decimal) with 2 decimal places and change dot by comma (vírgula).
+
+First, lets transforming an broken number (decimal) with 2 decimal places.
+
+```js
+let number = 312.365448162
+console.log(number.toFixed(2))
+```
+
+Console - 312.37
+
+Now, lets change dot by comma
+
+```js
+let number = 312.365448162
+console.log(number.toFixed(2).replace(".",","))
+```
+
+Console - 312,37
+
+In the last code, the object number was transforming in a string using "toFixed". And the "replace" change the dot by comma.
+If we dont have change the number by string, the console will show an error, because one number can't have an "," in his function.
+
+## Uppercase and Lowercase
+
+Transform lowercase letters in uppercase. Do the opposit too.
+
+```js
+let word = "Programar é muito bacana"
+console.log(word.toLowerCase())
+```
+Console - programar é muito bacana
+
+```js
+let word = "Programar é muito bacana"
+console.log(word.toUpperCase())
+```
+Console - PROGRAMAR É MUITO BACANA
+
+## Find words in phrases
+
+> Verified if the text contain the word "Amor".
+
+For this question we will use the "includes". He returns true if searchString appears as a substring of the result of converting this object to a String, at one or more positions that are greater than or equal to position; otherwise, returns false.
+
+```js
+let phrase = "Eu quero viver o amor"
+console.log(phrase.includes("Amor"))
+```
+Console - false
+
+The console return show false because the phrase.includes is case sensitive, that means he make difference between uppercase and lowercase. In that case we dont have the word "Amor", only "amor".
+
+```js
+let phrase = "Eu quero viver o Amor"
+console.log(phrase.includes("Amor"))
+```
+Console - true
+
+## Separating strings
+
+> Separate one text that contain spaces in a new array, where each word is one array position. After that, transform the array in one text and where was spaces, put _.
+
+For this question, firts we will use the "split". 
+Split = Split a string into substrings using the specified separator and return them as an array.
+
+```js
+let phrase = "Eu quero viver o amor!"
+let myArray = phrase.split(" ")
+console.log(myArray)
+```
+Console - (5) ['Eu', 'quero', 'viver', 'o', 'amor!']
+
+    THAT IS CORRECT. We separate the words by spaces. 
+
+    But, we can separete the words with letters.
+    Ex.: Lets separate the text with "o".
+
+    ```js
+    let phrase = "Eu quero viver o amor!"
+    let myArray = phrase.split("o")
+    console.log(myArray)
+    ```
+    Console - (4) ['Eu quer', ' viver ', ' am', 'r!']
+
+Now, lets transform the array in one text and where was spaces, put _.
+
+For this case, we use the join. 
+Join = Adds all the elements of an array into a string, separated by the specified separator string.
+
+```js
+let phrase = "Eu quero viver o amor!"
+let myArray = phrase.split(" ")
+let phraseWithUnderscore = myArray.join("_")
+console.log(phraseWithUnderscore)
+```
+Console - Eu_quero_viver_o_amor!
+
+Resuming, we have to back the array to string with join and in the same time tell what is the separator we want.
+
+## Array with constructor
+
+Criate array with constructor
+
+```js
+let myArray = ['a', 'b', 'c']
+console.log(myArray)
+```
+Console - (3) ['a', 'b', 'c']
+
+With constructor
+
+```js
+let myArray = new Array('a', 'b', 'c')
+console.log(myArray)
+```
+Console - (3) ['a', 'b', 'c']
+
+The return is the same, but with the constructor, each argument turn one element on the array.
 

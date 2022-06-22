@@ -120,5 +120,36 @@ console.log(joao.walk())
 console.log(mary.walk())
 
 */
+/*
+var name
 
-{}
+name = 'Jeziel'
+
+console.log(typeof name)
+
+let word = 'Paralelepipedo'
+console.log(word.length)
+
+let number = 1234
+console.log(String(number).length)
+
+let number = 312.365448162
+console.log(number.toFixed(2).replace(".",","))
+
+let word = "Programar é muito bacana"
+console.log(word.toUpperCase())
+
+let phrase = "Eu quero viver o Amor"
+console.log(phrase.includes("amor"))
+
+let phrase = "Eu quero viver o amor!"
+let myArray = phrase.split("o")
+console.log(myArray)
+
+let phrase = "Eu quero viver o amor!"
+let myArray = phrase.split(" ")
+let phraseWithUnderscore = myArray.join("_")
+console.log(phraseWithUnderscore)
+*/
+let myArray = new Array('a', 'b', 'c')
+console.log(myArray)
