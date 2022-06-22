@@ -150,6 +150,27 @@ let phrase = "Eu quero viver o amor!"
 let myArray = phrase.split(" ")
 let phraseWithUnderscore = myArray.join("_")
 console.log(phraseWithUnderscore)
-*/
+
 let myArray = new Array('a', 'b', 'c')
 console.log(myArray)
+
+console.log(["a","b","c"].length)
+
+console.log([
+  "a",
+  {type: "Array"},
+  function () {return "alo"},
+][2])
+
+let word = "pneumologista"
+console.log(Array.from(word))
+*/
+let techs = ["html", "css", "js"]
+techs.push("nodejs")
+techs.unshift("sql")
+
+let index = techs.indexOf('css')
+techs.splice(index, 1)
+
+console.log(techs)
+// console.log(techs)

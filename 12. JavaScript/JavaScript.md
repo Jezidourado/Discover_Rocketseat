@@ -1278,3 +1278,201 @@ Console - (3) ['a', 'b', 'c']
 
 The return is the same, but with the constructor, each argument turn one element on the array.
 
+## Counting elements of an array
+
+```js
+console.log(["a","b","c"].length)
+```
+Console - 3
+
+We also can counting other type of elementes, like bellow:
+
+```js
+console.log([
+  "a",
+  {type: "Array"},
+  function () {return "alo"},
+].length)
+```
+Console - 3
+
+Now, let's select the 2nd element of the array above
+
+```js
+console.log([
+  "a",
+  {type: "Array"},
+  function () {return "alo"},
+][2])
+```
+Console - ƒ () {return "alo"}
+
+## Strings to arrays
+
+> Transform one characters chain (string) in elements of an array
+
+To this question, we use the method "from".
+From = Creates an array from an iterable object.
+
+```js
+let word = "pneumologista"
+console.log(Array.from(word))
+```
+Console - (13) ['p', 'n', 'e', 'u', 'm', 'o', 'l', 'o', 'g', 'i', 's', 't', 'a']
+          0: "p"
+          1: "n"
+          2: "e"
+          3: "u"
+          4: "m"
+          5: "o"
+          6: "l"
+          7: "o"
+          8: "g"
+          9: "i"
+          10: "s"
+          11: "t"
+          12: "a"
+          length: 13
+          [[Prototype]]: Array(0)
+
+## Manipulating arrays
+
+```js
+let techs = ["html", "css", "js"]
+```
+
+> Add one item in the end
+
+push = Appends new elements to the end of an array, and returns the new length of the array.
+
+```js
+let techs = ["html", "css", "js"]
+console.log(techs.push("nodejs"))
+
+console.log(techs)
+```
+Console - (4) ['html', 'css', 'js', 'nodejs']
+
+> Add on item in the start
+
+unshift = Inserts new elements at the start of an array, and returns the new length of the array.
+
+```js
+let techs = ["html", "css", "js"]
+console.log(techs.push("nodejs"))
+console.log(techs.unshift("sql"))
+console.log(techs)
+```
+Console - (5) ['sql', 'html', 'css', 'js', 'nodejs']
+
+> Remove from end
+
+pop() = Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+
+```js
+let techs = ["html", "css", "js"]
+console.log(techs.push("nodejs"))
+console.log(techs.unshift("sql"))
+techs.pop()
+
+console.log(techs)
+```
+Console - (4) ['sql', 'html', 'css', 'js']
+
+> Remove from start
+
+Shift = Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+
+```js
+let techs = ["html", "css", "js"]
+console.log(techs.push("nodejs"))
+console.log(techs.unshift("sql"))
+techs.pop()
+techs.shift()
+
+console.log(techs)
+```
+Console - (3) ['html', 'css', 'js']
+
+> Pick up just some elements of array. In that case, just css and js
+
+Slice = Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+
+@param start
+The beginning index of the specified portion of the array. If start is undefined, then the slice begins at index 0.
+
+@param end
+The end index of the specified portion of the array. This is exclusive of the element at the index 'end'. If end is undefined, then the slice extends to the end of the array.
+
+```js
+let techs = ["html", "css", "js"]
+console.log(techs.push("nodejs"))
+console.log(techs.unshift("sql"))
+techs.pop()
+techs.shift()
+
+console.log(techs.slice(1, 3))
+```
+Console - (2) ['css', 'js']
+
+In that example, we want just css and js. So, the slice change the index to the css position "1". Than, we have to tell what is my final position, starting the counting from the 1st position "html". That means that the "js" posision is the 3rd.
+So, When we type "slice(1,3)" the console will bring to us just "css" and "js", because the "html" was cut of the equation.
+
+> Remove one or more items in any position of the array
+
+Splice = Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+
+@param start — The zero-based location in the array from which to start removing elements.
+
+@param deleteCount — The number of elements to remove.
+
+@returns — An array containing the elements that were deleted.
+
+```js
+let techs = ["html", "css", "js"]
+console.log(techs.push("nodejs"))
+console.log(techs.unshift("sql"))
+techs.pop()
+techs.shift()
+techs.splice(1, 2)
+
+console.log(techs)
+```
+Console - ['html']
+
+In that case, on the "splice(1,2)" first we define the zero-based location, that is the 1 (css). After that, we defined the number elements to remove, 2 (css, js).
+
+> Find the position of on array element.
+
+indexOf = Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+
+@param searchElement — The value to locate in the array.
+
+@param fromIndex — The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
+
+```js
+let techs = ["html", "css", "js"]
+techs.push("nodejs")
+techs.unshift("sql")
+
+let index = techs.indexOf('css')
+
+console.log(index)
+```
+Console - 2
+
+> Remove any element of the array
+
+```js
+let techs = ["html", "css", "js"]
+techs.push("nodejs")
+techs.unshift("sql")
+
+let index = techs.indexOf('css')
+techs.splice(index, 1)
+
+console.log(techs)
+```
+Console - ['sql', 'html', 'js', 'nodejs']
+
+In this case, firts we find the 'css' position with the "indexOf". After that, we used the "splice" starting on index ('css') and finaly remove the css itself.
