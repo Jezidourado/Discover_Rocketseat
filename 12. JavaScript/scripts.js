@@ -164,7 +164,7 @@ console.log([
 
 let word = "pneumologista"
 console.log(Array.from(word))
-*/
+
 let techs = ["html", "css", "js"]
 techs.push("nodejs")
 techs.unshift("sql")
@@ -174,3 +174,11 @@ techs.splice(index, 1)
 
 console.log(techs)
 // console.log(techs)
+
+let increment = 0
+console.log(++increment)
+*/
+let one = 1
+let two = 2
+console.log(two == 1)
+console.log(one == 1)

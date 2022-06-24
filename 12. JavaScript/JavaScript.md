@@ -1476,3 +1476,293 @@ console.log(techs)
 Console - ['sql', 'html', 'js', 'nodejs']
 
 In this case, firts we find the 'css' position with the "indexOf". After that, we used the "splice" starting on index ('css') and finaly remove the css itself.
+
+# Expressions and Operators
+
+# Expressions 
+
+Expressions is any line of code that define solutions, like:
+
+```js
+let number
+```
+
+The use of the ";" in the end of expressions:
+  - Is not mandatory use ";" in the end of expressions, except for this case:
+
+```js
+let number = 1
+
+(function() {
+    console.log('alo')
+})()
+```
+Console - Uncaugth TypeError: 1 is not a function
+
+For this case, we have type ";" after the number.
+
+## Expression new
+
+Is an left-hand-side expression
+
+Create a new object
+
+```js
+let name = new String('Jeziel')
+let age = new Number(23)
+console.log(name, age)
+```
+Console - String {"Mayk"}
+        - Number {23}
+
+If we open the results on the console, he will bring to us all the proprierties of this objects, just like the prototype.
+
+# Operators
+
+Operators are determinants to the result of the expressions
+
+> Binary operators
+
+```js
+let number = 1
+
+console.log(number + 1)
+```
+Console - 2
+
+The "+" in that case is an binary operator, because he make the operation between thwo differents values
+
+> Unary operators
+
+```js
+let number = 1
+
+console.log(++number)
+```
+Console - 2
+
+The "++" is an unary operator, because make the operation using just one value.
+
+But, operators is not necessary math operators, just like the example bellow:
+
+```js
+let number = 1
+
+console.log(typeof number)
+```
+Console - number
+
+"typeof" is an operator because show the result about one value, even if it's not an math operation.
+
+> Ternary operators
+
+The only case we have an ternary operator in JS:
+
+```js
+let number = 1
+
+console.log(true ? 'alo' : 'nada')
+```
+Console - alo
+
+It's a ternary operator because we have 3 expressions to have the result.
+
+## Typeof delete
+
+Is an unary operator. This operator delete an expression.
+
+```js
+const person = {
+  name: 'Jeziel',
+  age: 26,
+}
+delete person.age
+
+console.log(person)
+```
+Console - {name: 'Jeziel'}
+
+## Arithmetics operators
+
+Arithmetics operators are the math operators between two numbers
+
+> Simple arithmetics operators:
+
+- Multiplication = *
+- Division = /
+- Addition = +
+- Subtraction = -
+
+> Different arithmetics operators:
+
+- Rest of divison = % (remainder)
+
+```js
+let remainder
+remainder = 11 % 9
+console.log(remainder)
+```
+Console - 2
+
+That means, 11 / 9 = rest 2 integer numbers.
+
+- Increment = ++
+
+```js
+let increment = 0
+increment++
+console.log(increment)
+```
+Console - 1
+
+Different type of use increment:
+
+```js
+let increment = 0
+console.log(increment++)
+```
+Console - 0
+
+Here we have an error, because the "++" is after the increment.
+
+```js
+let increment = 0
+console.log(++increment)
+```
+Console - 1
+
+In that case, the command works normaly.
+
+- decrement = --
+
+```js
+let decrement = 0
+console.log(--decrement)
+```
+
+- exponential = **
+
+```js
+console.log(2 ** 3)
+```
+Console - 8
+
+This operation is jus like = 2^3 = 2 * 2 * 2 = 8.
+
+## Comparation operators - Equal to and Different to
+
+Will compair values and return one Boolean as answear to the comparation.
+
+IMPORTANT: = is different than ==
+
+= we use to say the value of an element:
+
+let one = 1
+let two = 2
+
+== we use to math operations:
+
+1 + 2 == 3
+
+### Equal to
+
+==
+
+```js
+let one = 1
+let two = 2
+console.log(two == 1)
+console.log(one == '1')
+```
+Console - false
+          true
+
+### Different to
+
+!=
+
+```js
+let one = 1
+let two = 2
+console.log(one != two)
+console.log(one != 1)
+console.log(one != '1')
+```
+Console - true
+          false
+          false
+
+### Stricty equal to
+
+'===
+
+Equal to "==" will bring to us false or true just based in the values (1 == '1' - true). But strictly equal will say if is false or true based in the value and the type of value (1 === '1' - false).
+
+```js
+let one = 1
+let two = 2
+console.log(one === "1")
+console.log(one === 1)
+```
+Console - false
+          true
+
+### Stricty different to
+
+!==
+
+Is the same function than strictly equal, but for the oposite.
+
+```js
+let one = 1
+let two = 2
+console.log(one !== "1")
+console.log(one !== 1)
+```
+Console - true
+          false
+
+## Comparation operators
+
+- grather than >
+
+```js
+let one = 1
+let two = 2
+console.log(one > two)
+```
+Console - false
+
+- lower than <
+
+```js
+let one = 1
+let two = 2
+console.log(one < two)
+```
+Console - true
+
+- grather equal than >=
+
+```js
+let one = 1
+let two = 2
+console.log(one >= 1)
+console.log(two >= 1)
+```
+Console - true
+          true
+
+- lower equal than <=
+
+```js
+let one = 1
+let two = 2
+console.log(one <= two)
+console.log(one <= 1)
+console.log(one <= 0)
+```
+Console - true
+          true
+          false
+
