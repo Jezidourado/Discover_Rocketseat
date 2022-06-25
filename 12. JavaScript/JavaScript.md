@@ -1512,7 +1512,7 @@ let name = new String('Jeziel')
 let age = new Number(23)
 console.log(name, age)
 ```
-Console - String {"Mayk"}
+Console - String {"Jeziel"}
         - Number {23}
 
 If we open the results on the console, he will bring to us all the proprierties of this objects, just like the prototype.
@@ -1765,4 +1765,5 @@ console.log(one <= 0)
 Console - true
           true
           false
+
 
